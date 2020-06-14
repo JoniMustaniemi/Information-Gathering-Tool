@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react"
+import React, { Component } from "react"
 import "./App.css"
 import SidePanel from './components/SidePanel.js'
 import TopPanel from './components/TopPanel.js'

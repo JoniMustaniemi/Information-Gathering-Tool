@@ -1,4 +1,4 @@
-import React, {Component} from "react"
+import React from "react"
 
 class TopPanel extends React.Component {
     render(props) {
