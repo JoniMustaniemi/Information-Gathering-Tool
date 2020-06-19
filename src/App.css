@@ -13,13 +13,9 @@ body {
   padding-top: 10px;
 }
 
-.display-none {
-  display: none;
-}
-
-.opacity-0 {
-  opacity: 0;
-}
+.opacity-0 { 
+  opacity: 0; 
+ }
 
 .topPanel {
   width: 100vw;
@@ -36,10 +32,20 @@ body {
   position: relative;
   font-size: 2em;
   top: 40%;
-  
 }
 
-.FormContainer {
+.modifyWrapper {
+  width:100vw;
+  height:100vh;
+  position: absolute;
+  top:120px;
+  margin-left:120px;
+  display: flex;
+  justify-content: space-evenly;
+ 
+}
+
+.formContainer {
   padding-top:100px;
   width: auto;
   height:100vh;
@@ -48,23 +54,18 @@ body {
   justify-content: space-evenly;
 }
 
-.FormContainer > * {
+.formContainer > * {
   font-family: "Courier New", Courier, monospace;
 }
 
 .animated {
- transition: all 0.4s ease-in;
+ transition: all 0.5s ease-in;
 }
 
 .formElementLarge {
   height: 50px;
-  margin-bottom: 200px;
+  margin-bottom: 250px;
 }
-
-.formElementSmall {
-position: absolute;
-margin-top: -90px;
-} 
 
 
 
@@ -72,6 +73,24 @@ h3 {
   font-size: 1.1em;
   margin:0;
   margin-bottom:5px;
+}
+
+.formTopRow {
+  width: 80%;
+  height: 60px;
+  position: absolute;
+  top:130px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.formBottomRow {
+  width: 80%;
+  height: 60px;
+  position: absolute;
+  bottom: 30px;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .inputElementLarge {
@@ -84,9 +103,12 @@ outline:none;
 height: 200px;
 max-height:200px;
 min-height: 200px;
-min-width: 33vw;
-max-width: 33vw;
+width:25vw;
+max-width: 350px;
+font-size: 1.3em;
+resize: none;
 }
+
 
 .inputElementSmall {
   outline:none;
@@ -112,15 +134,56 @@ max-width: 33vw;
   margin-top: 60px;
 }
 
-.iconContainer {
+.sidePanel .iconContainer {
  justify-self: center;
  display: flex;
  justify-content: center;
- margin-bottom:100px;
 }
 
 .modify button {
- background-image: url('./pics/modify_icon.png');
+  width: 20px;
+  height: 20px;
+  background-size:cover;
+  background-color: inherit;
+  border: none;
+  filter: invert(0.5);
+  outline:none;
+  background-image: url('./pics/modify_icon.png');
+}
+
+.modify h4 {
+  display:none;
+}
+
+.toolbarButtonX {
+  outline:none;
+  border-radius: 50px;
+  width: 20px;
+  height: 20px;
+  font-size: 9px;
+  background-color: rgb(177, 10, 10);
+  float:right;
+}
+
+.iconContainer button:hover {
+  transform: scale(1.05);
+  filter: invert(1);
+}
+
+.formElementLargeModify , .formElementSmallModify {
+  position: relative;
+}
+
+.formElementLargeModify {
+  margin:0;
+  top:60px;
+  right:25px;
+}
+
+
+.formElementSmallModify {
+  top:50px;
+  right:25px;
 }
 
 .login button {
@@ -129,7 +192,7 @@ max-width: 33vw;
 }
 
 .login {
-  margin-bottom: 300px;
+  margin-bottom: 80vh;
 }
 
 .download button {
@@ -137,18 +200,18 @@ max-width: 33vw;
 }
 
 
-
 .download h4 {
   margin-left:-10px;
 }
 
-.sidePanel button:hover {
-  transform: scale(1.05);
-  filter: invert(0.8);
+.iconContainer button:active {
+  transform: scale(0.95);
+  outline:none;
+  
 }
 
-.sidePanel button:active {
-  transform: scale(0.95);
+.display-none {
+  display: none;
 }
 
 

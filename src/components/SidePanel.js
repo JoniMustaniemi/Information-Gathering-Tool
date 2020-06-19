@@ -5,8 +5,7 @@ class SidePanel extends React.Component {
     render(props) {
      return <div className="sidePanel">
       <ButtonElement name="login"/>
-     <ButtonElement name="modify"/>
-     <ButtonElement name="download"/>
+      <ButtonElement name="download"/>
      </div>
     }
 
