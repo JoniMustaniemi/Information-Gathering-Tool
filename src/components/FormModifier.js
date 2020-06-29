@@ -12,10 +12,20 @@ class FormModifier extends React.Component {
     }
 
     handleClickEvent(inputID, buttonID) {
-      console.log(inputID);
-     let inputField = document.getElementById(inputID);
-     console.log(inputField.value);
-    
+      let title = "title";
+      let color = "color";
+      if(buttonID.includes(title)) {
+        let inputField = document.getElementById(inputID);
+        this.changeFormTitle(this.props.formReference, inputField.value, inputField)
+      } else if (buttonID.includes(color)) {
+        let inputField = document.getElementById(this.props.formReference+"TextArea");
+        let colorElement = document.getElementById(inputID);
+        this.setBackgroundColor(inputField,colorElement.value);
+      }
+    }
+
+    setBackgroundColor(inputArea, color) {
+      inputArea.style.backgroundColor = color;
     }
 
     changeFormTitle(formID, newValue, inputfield) {

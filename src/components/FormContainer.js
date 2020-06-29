@@ -16,10 +16,12 @@ class FormContainer extends React.Component {
         </div>
         <div className="formLeft">
           <FormElementLarge identifier="fl1" title="I want to be able to.."/>
+          <div className="divider"></div>
           <FormElementLarge identifier="fl2" title="So that I can.."/>
         </div>
         <div className="formRight">
           <FormElementLarge identifier="fl3" title="To do that I need.."/>
+          <div className="divider"></div>
           <FormElementLarge identifier="fl4" title="I know im done in target when.."/>
         </div>
         <div className="formBottomRow">
