@@ -1,6 +1,6 @@
-import React from "react"
-import FormElementLarge from './FormElementLarge.js'
-import FormElementSmall from './FormElementSmall.js'
+import React from "react";
+import FormElementLarge from './FormElementLarge.js';
+import FormElementSmall from './FormElementSmall.js';
 
 class FormContainer extends React.Component {
 
@@ -10,21 +10,21 @@ class FormContainer extends React.Component {
       <div id="formWrapper" className="formContainer animated">
         
         <div className="formTopRow">
-          <FormElementSmall title="User"/>
-          <FormElementSmall title="Block"/>
-          <FormElementSmall title="Story"/>
+          <FormElementSmall identifier="fs1" title="User"/>
+          <FormElementSmall identifier="fs2" title="Block"/>
+          <FormElementSmall identifier="fs3" title="Story"/>
         </div>
-        <div>
-          <FormElementLarge title="I want to be able to.."/>
-          <FormElementLarge title="So that I can.."/>
+        <div className="formLeft">
+          <FormElementLarge identifier="fl1" title="I want to be able to.."/>
+          <FormElementLarge identifier="fl2" title="So that I can.."/>
         </div>
-        <div>
-          <FormElementLarge title="To do that I need.."/>
-          <FormElementLarge title="I know im done in target when.."/>
+        <div className="formRight">
+          <FormElementLarge identifier="fl3" title="To do that I need.."/>
+          <FormElementLarge identifier="fl4" title="I know im done in target when.."/>
         </div>
         <div className="formBottomRow">
-          <FormElementSmall title="Importance"/>
-          <FormElementSmall title="Estimate"/>
+        {/*   <FormElementSmall title="Importance"/>
+          <FormElementSmall title="Estimate"/> */}
          
         </div>
       </div>
@@ -34,4 +34,4 @@ class FormContainer extends React.Component {
     }
   }
 
-export default FormContainer
+export default FormContainer;

@@ -7,7 +7,7 @@ body {
   background-color: #242424;
   margin-left: -1px;
   width: 120px;
-  height:100vh;
+  min-height:110vh;
   position: absolute;
   border-right: 2px groove whitesmoke;
   padding-top: 10px;
@@ -17,9 +17,69 @@ body {
   opacity: 0; 
  }
 
+ .loginWrapper {
+   background-color: #242424;
+   border-radius:5px;
+   color: whitesmoke;
+   text-align: center;
+   width: 200px;
+   height:200px;
+   position: absolute;
+   top:0;
+   left:8vw;
+   z-index: 3;
+ }
+
+ .loginWrapper input {
+   outline: none;
+   border-radius: 5px;
+ }
+
+ 
+
+ .modifyButton {
+   justify-self: center;
+   height:20px;
+ }
+
+ .color {
+  top: 45px;
+ }
+
+ .title {
+   top:-20px;
+ }
+
+ .modifyChangerWrapper {
+  border-bottom: 1px groove whitesmoke;
+  border-top: 1px groove whitesmoke;
+  padding:5px;
+ }
+
+ .modifyChangerWrapper input {
+  position: relative;
+  width:80%;
+  height:20px;
+  outline:none;
+  font-size: 0.7em;
+  margin-bottom:5px;
+ }
+
+ .title input:focus{
+   width:250%;
+   top:20px;
+  transform: scale(2);
+ }
+
+ .logout {
+  position: relative;
+  top:20px;
+  
+ }
+ 
 .topPanel {
   width: 100vw;
-  height: 120px;
+  height: 10vh;
   max-height: 120px;
   margin-left: 120px;
   border-bottom: 2px groove whitesmoke;
@@ -64,10 +124,8 @@ body {
 
 .formElementLarge {
   height: 50px;
-  margin-bottom: 250px;
+  margin-bottom: 20vh;
 }
-
-
 
 h3 {
   font-size: 1.1em;
@@ -79,10 +137,12 @@ h3 {
   width: 80%;
   height: 60px;
   position: absolute;
-  top:130px;
+  top:80px;
   display: flex;
   justify-content: space-evenly;
 }
+
+
 
 .formBottomRow {
   width: 80%;
@@ -100,13 +160,54 @@ padding-top:5px;
 border: 1px solid #242424;
 background-color: whitesmoke;
 outline:none;
-height: 200px;
-max-height:200px;
-min-height: 200px;
+height: 20vh;
 width:25vw;
-max-width: 350px;
 font-size: 1.3em;
 resize: none;
+}
+
+
+
+.formLeft > .formElementLarge, .formRight > .formElementLarge {
+  margin-bottom:20vh;
+}
+
+.tooltipLarge, .tooltipSmall {
+  background-color:#4e4e4e;
+  width:80px;
+  position: relative;
+  border-radius: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 1px 1px;
+  text-align: center;
+  z-index: 3;
+  padding-bottom:10px;
+}
+
+.modifyMenuElement {
+  width: 100%;
+  height: 30%;
+  border:none;
+  background-color: inherit;
+  margin-bottom: 5px;
+  outline:none;
+}
+
+.tooltipLarge {
+  left:-120px;
+  top:-140px;
+}
+
+.tooltipSmall {
+  left:-120px;
+  top:-30px;
+}
+
+.tooltip p {
+  color: whitesmoke;
+  font-size: 0.7em;
+  text-decoration-color: #f5f5f56b;
 }
 
 
@@ -118,7 +219,7 @@ resize: none;
   border: 1px solid #242424;
 }
 
-.sidePanel button {
+.sidePanel #login, .sidePanel #download, .sidePanel #logout { /* fix hover */
   background-size:cover;
   background-color: inherit;
   filter: invert(0.5);
@@ -128,7 +229,21 @@ resize: none;
   border: none;
 }
 
+.sidePanel #login:hover, .sidePanel #download:hover, #logout:hover {
+  transform: scale(1.05);
+  filter: invert(1);
+}
 
+.loginButton {
+  outline: none;
+  border-radius: 5px;
+  margin-top:10px;
+  border-top: none;
+  border-bottom: none;
+  border-left: none;
+  border-right:none;
+  margin-left:10px;
+}
 
 .sidePanel button h4 {
   margin-top: 60px;
@@ -155,20 +270,7 @@ resize: none;
   display:none;
 }
 
-.toolbarButtonX {
-  outline:none;
-  border-radius: 50px;
-  width: 20px;
-  height: 20px;
-  font-size: 9px;
-  background-color: rgb(177, 10, 10);
-  float:right;
-}
 
-.iconContainer button:hover {
-  transform: scale(1.05);
-  filter: invert(1);
-}
 
 .formElementLargeModify , .formElementSmallModify {
   position: relative;
@@ -186,14 +288,18 @@ resize: none;
   right:25px;
 }
 
-.login button {
+.login button, .logout button {
   background-image: url('./pics/login_icon.png');
  
 }
 
 .login {
-  margin-bottom: 80vh;
+  margin-top:20px;
+  margin-bottom: 75vh;
 }
+
+
+
 
 .download button {
   background-image: url('./pics/download_icon.png');
