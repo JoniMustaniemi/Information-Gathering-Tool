@@ -7,11 +7,17 @@ body {
   background-color: #242424;
   margin-left: -1px;
   width: 120px;
-  min-height:110vh;
+  height: 100vh;
   position: absolute;
   border-right: 2px groove whitesmoke;
   padding-top: 10px;
 }
+
+.formLeft, .formRight {
+  padding-top:25vh;
+}
+
+
 
 .opacity-0 { 
   opacity: 0; 
@@ -25,7 +31,7 @@ body {
    width: 200px;
    height:200px;
    position: absolute;
-   top:0;
+   top:0vh;
    left:110px;
    z-index: 3;
    padding-bottom:10px;
@@ -40,10 +46,9 @@ body {
  .modifyButton {
    justify-self: center;
    height:20px;
-   
+   width: 20px;
  }
 
- 
 
  .color {
   top: 45px;
@@ -87,26 +92,9 @@ body {
 
  .logout {
   position: relative;
-  top:20px;
+  top:0vh;
   
  }
- 
-.topPanel {
-  width: 100vw;
-  height: 10vh;
-  max-height: 120px;
-  margin-left: 120px;
-  border-bottom: 2px groove whitesmoke;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.titleElement {
-  font-family:  "Courier New", Courier, monospace;
-  position: relative;
-  font-size: 2em;
-  top: 40%;
-}
 
 .modifyWrapper {
   width:100vw;
@@ -120,17 +108,17 @@ body {
 }
 
 .formContainer {
-  padding-top:100px;
   width: auto;
+  background-color:lightgray;
   height:100vh;
   margin-left: 120px;
   display: flex;
   justify-content: space-evenly;
 }
 
+
 .formContainer > * {
-  font-family: "Courier New", Courier, monospace;
-  margin-top:5vh;
+  font-family: Monaco,Courier,monospace;
 }
 
 .animated {
@@ -147,7 +135,7 @@ h3 {
   margin:0;
   margin-bottom:5px;
   max-width: 30vw;
-
+  min-height:45px;
   overflow-wrap: break-word;
  
 }
@@ -156,7 +144,7 @@ h3 {
   width: 80%;
   height: 60px;
   position: absolute;
-  top:80px;
+  top:5vh;
   display: flex;
   justify-content: space-evenly;
 }
@@ -184,17 +172,10 @@ background-color: whitesmoke;
 outline:none;
 height: 20vh;
 width:25vw;
-font-size: 1.3em;
+font-size: 1em;
 resize: none;
+font-family: Monaco,Courier,monospace;
 }
-
-
-
-.formLeft > .formElementLarge, .formRight > .formElementLarge {
-  margin-bottom:20vh;
-}
-
-
 
 .tooltipLarge, .tooltipSmall {
   background-color:#4e4e4e;
@@ -243,7 +224,7 @@ resize: none;
   border: 1px solid #242424;
 }
 
-.sidePanel #login, .sidePanel #download, .sidePanel #logout { /* fix hover */
+.sidePanel #login, .sidePanel #download, .sidePanel #logout { 
   background-size:cover;
   background-color: inherit;
   filter: invert(0.5);
@@ -302,13 +283,13 @@ resize: none;
 
 .formElementLargeModify {
   margin:0;
-  top:60px;
+  top:80px;
   right:25px;
 }
 
 
 .formElementSmallModify {
-  top:50px;
+  top:70px;
   right:25px;
 }
 
@@ -318,7 +299,6 @@ resize: none;
 }
 
 .login {
-  margin-top:20px;
   margin-bottom: 75vh;
 }
 
