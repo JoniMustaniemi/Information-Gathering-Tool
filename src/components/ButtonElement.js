@@ -1,5 +1,5 @@
 import React from "react";
-import { saveAs } from 'file-saver';
+
 
 var modifyMenus = [];
 var formValues = [];
@@ -87,11 +87,6 @@ class ButtonElement extends React.Component {
     }
 
     saveData() {
-      let x = JSON.stringify(formValues);
-      var blob = new Blob([x],
-                { type: "text/plain;charset=utf-8" });
-      saveAs(blob, "data.txt");
-     
     }
 
     toggleModification(children) {
