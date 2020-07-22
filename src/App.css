@@ -17,8 +17,6 @@ body {
   padding-top:25vh;
 }
 
-
-
 .opacity-0 { 
   opacity: 0; 
  }
@@ -86,14 +84,17 @@ body {
 
  .title input:focus{
    width:250%;
-   top:20px;
+   top:-8px;
   transform: scale(2);
  }
 
  .logout {
   position: relative;
   top:0vh;
-  
+ }
+
+ .show {
+   background-color: #5586a3;
  }
 
 .modifyWrapper {
@@ -155,12 +156,26 @@ h3 {
 }
 
 .formBottomRow {
-  width: 80%;
-  height: 60px;
   position: absolute;
   bottom: 30px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+}
+
+.formBottomRow button {
+  font-family: Monaco,Courier,monospace;
+  background-color: #86a38d;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+}
+
+.formBottomRow button:active  {
+  transform: scale(0.9);
+}
+
+.formBottomRow button:hover {
+  color: whitesmoke;
 }
 
 .inputElementLarge {
@@ -275,8 +290,6 @@ font-family: Monaco,Courier,monospace;
   display:none;
 }
 
-
-
 .formElementLargeModify , .formElementSmallModify {
   position: relative;
 }
@@ -306,6 +319,15 @@ font-family: Monaco,Courier,monospace;
   background-image: url('./pics/download_icon.png');
 }
 
+#submit {
+padding:5px;
+border: 1px solid #242424;
+}
+
+#submit h4 {
+  margin: 0;
+  pointer-events: none;
+}
 
 .download h4 {
   margin-left:-10px;
