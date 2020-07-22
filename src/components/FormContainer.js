@@ -1,6 +1,7 @@
 import React from "react";
 import FormElementLarge from './FormElementLarge.js';
 import FormElementSmall from './FormElementSmall.js';
+import ButtonElement from './ButtonElement.js';
 
 class FormContainer extends React.Component {
 
@@ -25,15 +26,18 @@ class FormContainer extends React.Component {
           <FormElementLarge identifier="fl4" title="I know im done in target when.."/>
         </div>
         <div className="formBottomRow">
-        {/*   <FormElementSmall title="Importance"/>
-          <FormElementSmall title="Estimate"/> */}
-         
+          <ButtonElement name="submit"/>
         </div>
       </div>
     
       </div>
      
     }
+
+    handleClickEvent() {
+      
+    }
+
   }
 
 export default FormContainer;

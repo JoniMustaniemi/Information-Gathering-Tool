@@ -1,7 +1,10 @@
 import React from "react";
-
+const fs = require('fs');
 
 var modifyMenus = [];
+var formValues = [];
+var titles = [];
+var bodyTexts = [];
 
 class ButtonElement extends React.Component {
   
@@ -9,7 +12,6 @@ class ButtonElement extends React.Component {
      
       if(this.props.name) {
        var name = this.capitalize(this.props.name);
-       
       }
      
      return  <div className={this.props.name + " iconContainer"}>
@@ -18,15 +20,19 @@ class ButtonElement extends React.Component {
     }
 
     handleClickEvent(element) {
+      let formWrapper = element.parentNode.parentNode.parentNode;
     if(element.id === "modify") {
-      let object = element.parentNode.parentNode.parentNode;
-      this.getObjectValues(object);
+      this.toggleModification(formWrapper.children);
+    
     } if(element.id === "login") {
       this.emptyfields("login");
       this.toggleLoginMenu();
     }
     if(element.id === "logout") {
       this.logOut();
+    }
+    if(element.id === "submit") {
+      this.getValues();
     }
     }
 
@@ -65,7 +71,6 @@ class ButtonElement extends React.Component {
 
     toggleLoginMenu() {
       let element = document.getElementById("loginContainer");
-
       if(element.classList.contains("display-none")) {
         element.classList.remove("display-none");
       } else {
@@ -75,16 +80,13 @@ class ButtonElement extends React.Component {
       
     }
 
-    getObjectValues(object) {
-      let children = object.children;
-      var formInfoObject = {
-        title: "",
-        text: "",
-      }
-      this.getTitleValue(children, formInfoObject);
-      this.getTextValue(children,formInfoObject);
-      //console.log(formInfoObject);
-      this.toggleModification(children);
+    getValues() {
+      formValues = [];
+      titles = [];
+      bodyTexts = [];
+      let formElements = document.querySelectorAll(".formElement");   
+      this.getFormValues(formElements);
+      //TODO: save values in JSON ---- values are in form values
     }
 
     toggleModification(children) {
@@ -122,22 +124,16 @@ class ButtonElement extends React.Component {
       modifyMenus.push(currentMenu);
     }
 
-    getTitleValue(children, formInfoObject) {
-      for (let i = 0; i < children.length; i++) {
-        if(children[i].tagName === "H3") {
-          formInfoObject.title = children[i].innerHTML;
-        }
-      }
-      return formInfoObject;
-    }
-
-    getTextValue(children, formInfoObject) {
-      for (let i = 0; i < children.length; i++) {
-        if(children[i].tagName === "TEXTAREA" || children[i].tagName === "INPUT") {
-          formInfoObject.text = children[i].value;
-        }
-      }
-      return formInfoObject;
+    getFormValues(formElements) {
+     
+      for (let i = 0; i < formElements.length; i++) {
+        let tempObject = {};
+        tempObject.id = formElements[i].children[1].id;
+        tempObject.text = formElements[i].children[2].value;
+        tempObject.title = formElements[i].children[1].innerHTML;
+        formValues.push(tempObject);
+    } 
+    console.log(formValues);
     }
 
     capitalize = (string) => {
