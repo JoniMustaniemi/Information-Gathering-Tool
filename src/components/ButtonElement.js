@@ -1,10 +1,8 @@
 import React from "react";
-const fs = require('fs');
+import { saveAs } from 'file-saver';
 
 var modifyMenus = [];
 var formValues = [];
-var titles = [];
-var bodyTexts = [];
 
 class ButtonElement extends React.Component {
   
@@ -82,11 +80,18 @@ class ButtonElement extends React.Component {
 
     getValues() {
       formValues = [];
-      titles = [];
-      bodyTexts = [];
       let formElements = document.querySelectorAll(".formElement");   
       this.getFormValues(formElements);
+      this.saveData();
       //TODO: save values in JSON ---- values are in form values
+    }
+
+    saveData() {
+      let x = JSON.stringify(formValues);
+      var blob = new Blob([x],
+                { type: "text/plain;charset=utf-8" });
+      saveAs(blob, "data.txt");
+     
     }
 
     toggleModification(children) {
