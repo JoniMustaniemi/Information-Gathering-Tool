@@ -1,5 +1,5 @@
 body {
-  background-color:#ccc9c9;
+  background-color:lightgray;
   overflow: hidden;
 }
 
@@ -13,8 +13,44 @@ body {
   padding-top: 10px;
 }
 
-.formLeft, .formRight {
+.formLeft, .formCenter {
   padding-top:25vh;
+}
+
+.formCenter {
+  margin-left:50px;
+  margin-right: 50px;
+}
+
+
+.formRight {
+  padding-top:25vh;
+  width:100%;
+}
+
+.formRightPart1 {
+  width: 48%;
+  float: left;
+}
+
+.formRightPart2 {
+  width: 48%;
+  margin-left:2%;
+  float:right;
+}
+
+.formRightBottom {
+  margin-top:15vh;
+  height: 49vh;
+  width:100%;
+}
+
+#fl5 {
+  margin-bottom:-15px;
+}
+
+#fl5TextArea {
+  height:40.5vh;
 }
 
 .opacity-0 { 
@@ -40,13 +76,11 @@ body {
    border-radius: 5px;
  }
 
-
  .modifyButton {
    justify-self: center;
    height:20px;
    width: 20px;
  }
-
 
  .color {
   top: 45px;
@@ -83,9 +117,8 @@ body {
  }
 
  .title input:focus{
-   width:250%;
-   top:-8px;
-  transform: scale(2);
+   width: 300%;
+   font-size: large;
  }
 
  .logout {
@@ -110,11 +143,11 @@ body {
 
 .formContainer {
   width: auto;
-  background-color:lightgray;
+  background-color:lightgrey;
   height:100vh;
-  margin-left: 120px;
   display: flex;
-  justify-content: space-evenly;
+  margin-left:150px;
+  justify-content: left;
 }
 
 
@@ -176,8 +209,9 @@ h3 {
 
 .formBottomRow {
   position: absolute;
-  bottom: 30px;
+  bottom: 20px;
   display: flex;
+  right:50vw;
   justify-content: center;
 }
 
@@ -213,9 +247,10 @@ box-shadow: 10px 10px 50px #646464;
 }
 
 .tooltipLarge, .tooltipSmall {
-  background-color:#4e4e4e;
+  background-color:#363636;
   width:80px;
   position: relative;
+  border: 1px groove whitesmoke;
   border-radius: 10px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -223,16 +258,16 @@ box-shadow: 10px 10px 50px #646464;
   text-align: center;
   z-index: 3;
   padding-bottom:10px;
-  box-shadow: 10px 10px 50px #646464;
 }
 
 .modifyMenuElement {
   width: 100%;
   height: 30%;
   border:none;
-  background-color: inherit;
+  background-color:inherit;
   margin-bottom: 5px;
   outline:none;
+
 }
 
 .tooltipLarge {
@@ -251,6 +286,20 @@ box-shadow: 10px 10px 50px #646464;
   text-decoration-color: #f5f5f56b;
 }
 
+.choiceElement {
+  background-color: white;
+  width: 80%;
+  height:41vh;
+  border: 1px solid #242424;
+  border-radius: 10px;
+  box-shadow: 10px 10px 50px #646464;
+  margin-top: 20vh;
+}
+
+.choiceElementTitle {
+  position: relative;
+  top:-45vh;
+}
 
 .inputElementSmall {
   outline:none;
@@ -322,15 +371,17 @@ box-shadow: 10px 10px 50px #646464;
   right:25px;
 }
 
+.formElementSmall {
+  max-height: 10px;
+}
 
 .formElementSmallModify {
-  top:70px;
-  right:25px;
+  top: 70px;
+  right: 25px;
 }
 
 .login button, .logout button {
   background-image: url('./pics/login_icon.png');
- 
 }
 
 .login {
@@ -344,6 +395,8 @@ box-shadow: 10px 10px 50px #646464;
 #submit {
 padding:5px;
 border: 1px solid #242424;
+box-shadow: 10px 10px 50px #646464;
+
 }
 
 #submit h4 {
