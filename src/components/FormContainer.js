@@ -11,9 +11,11 @@ class FormContainer extends React.Component {
       <div id="formWrapper" className="formContainer animated">
         
         <div className="formTopRow">
+        <div className="updateCycle green"></div>
           <FormElementSmall identifier="fs1" title="User"/>
           <FormElementSmall identifier="fs2" title="Block"/>
           <FormElementSmall identifier="fs3" title="Story"/>
+          
         </div>
         <div className="formLeft">
           <FormElementLarge identifier="fl1" title="I want to be able to.."/>

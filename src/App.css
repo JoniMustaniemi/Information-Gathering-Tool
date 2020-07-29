@@ -131,6 +131,25 @@ body {
   margin-bottom: 20vh;
 }
 
+.updateCycle {
+  background-color: lightgrey;
+  border-radius: 50%;
+  border: 1px solid black;
+  width:5px;
+  height: 5px;
+  position: absolute;
+  left:0;
+  top:-20px;
+}
+
+.green {
+  background-color: #09d309;
+}
+
+.orange {
+  background-color: orange;
+}
+
 h3 {
   font-size: 1em;
   margin:0;
