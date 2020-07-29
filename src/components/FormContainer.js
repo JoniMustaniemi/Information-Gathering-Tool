@@ -12,7 +12,7 @@ class FormContainer extends React.Component {
       <div id="formWrapper" className="formContainer animated">
         
         <div className="formTopRow">
-        <div className="updateCycle orange"></div>
+       
           <FormElementSmall identifier="fs1" title="User"/>
           <FormElementSmall identifier="fs2" title="Block"/>
           <FormElementSmall identifier="fs3" title="Story"/>
