@@ -16,7 +16,7 @@ class FormContainer extends React.Component {
           <FormElementSmall identifier="fs3" title="Story"/>
         </div>
         <div className="formLeft">
-          <FormElementLarge identifier="fl1" title="I want to be able to see.."/>
+          <FormElementLarge identifier="fl1" title="I want to be able to.."/>
           <div className="divider"></div>
           <FormElementLarge identifier="fl2" title="So that I can.."/>
         </div>
