@@ -276,7 +276,6 @@ box-shadow: 2px 2px 5px #646464;
   top:-20vh;
 }
 
-
 .tooltipSmall {
   left:-120px;
   top:-30px;
@@ -293,19 +292,31 @@ box-shadow: 2px 2px 5px #646464;
   left:-120px;
 }
 
+.radioType1 > input[type="radio"] {
+ transform: scale(2);
+ filter: grayscale(0.8);
+}
+
+.radioType1 {
+  margin-bottom: 1vh;
+  position: relative;
+  top:-5vh;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+
 .choiceElement {
-  background-color: white;
-  width: 80%;
-  height:41vh;
-  border: 1px solid #242424;
+  width: 90%;
+  height:auto;
   border-radius: 10px;
-  box-shadow: 2px 2px 5px #646464;
-  margin-top: 20vh;
+  margin-top: 25vh;
+  margin-left:1vw;
 }
 
 .choiceElementTitle {
   position: relative;
-  top:-45vh;
+  top:-3vh;
 }
 
 .inputElementSmall {

@@ -10,13 +10,10 @@ class FormContainer extends React.Component {
     render(props) {
     return <div>
       <div id="formWrapper" className="formContainer animated">
-        
         <div className="formTopRow">
-       
           <FormElementSmall identifier="fs1" title="User"/>
           <FormElementSmall identifier="fs2" title="Block"/>
           <FormElementSmall identifier="fs3" title="Story"/>
-          
         </div>
         <div className="formLeft">
           <FormElementLarge identifier="fl1" title="I want to be able to.."/>
@@ -36,18 +33,22 @@ class FormContainer extends React.Component {
           <FormElementSmall identifier="fs5" title="Estimate"/>
           </div>
           <div className="formRightBottom">
-          <FormChoiceElement identifier="choice" title="Type"/>
+          <div className="choiceElement">
+          <h3 className="choiceElementTitle">Type</h3>
+            <FormChoiceElement identifier="choice1" title="Sales"/>
+            <FormChoiceElement identifier="choice2" title="Product Management"/>
+            <FormChoiceElement identifier="choice2" title="R&D"/>
+            <FormChoiceElement identifier="choice2" title="Order Engineering"/>
+            <FormChoiceElement identifier="choice2" title="Configurator Modeller"/>
+          </div>
           </div>
         </div>
         <div className="formBottomRow">
           <ButtonElement name="submit"/>
         </div>
       </div>
-    
-      </div>
-     
+      </div> 
     }
-
     handleClickEvent() {
       
     }
