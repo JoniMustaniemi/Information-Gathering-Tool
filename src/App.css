@@ -191,7 +191,6 @@ h3 {
   max-width: 30vw;
   min-height:45px;
   overflow-wrap: break-word;
- 
 }
 
 .formTopRow {
@@ -288,9 +287,8 @@ box-shadow: 2px 2px 5px #646464;
 }
 
 .tooltipChoice {
-  position: absolute;
-  right:28.5vw;
-  top:-1vh;
+  top:-60px;
+  left:-140px;
 }
 
 .radioType1 > input[type="radio"] {
@@ -392,7 +390,7 @@ box-shadow: 2px 2px 5px #646464;
 }
 
 .formElementChoiceModify {
-  top:-3.5vh;
+  top:-2.5vh;
   left:-2.5vw;
 }
 
