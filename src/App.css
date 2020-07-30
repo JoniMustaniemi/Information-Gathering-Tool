@@ -308,16 +308,17 @@ box-shadow: 2px 2px 5px #646464;
 }
 
 .choiceElement {
-  width: 90%;
+  display: grid;
+  justify-content: center;
+  width: 100%;
   height:auto;
   border-radius: 10px;
   margin-top: 25vh;
-  margin-left:1vw;
 }
 
 .choiceElementTitle {
   position: relative;
-  top:-3vh;
+  top:-5vh;
 }
 
 .inputElementSmall {
