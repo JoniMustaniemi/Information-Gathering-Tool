@@ -1,5 +1,5 @@
 import React from "react";
-import ModifyMenuElement from './ModifyMenuElement.js';
+// import ModifyMenuElement from './ModifyMenuElement.js';
 import ButtonElement from './ButtonElement.js';
 
 class FormChoiceElement extends React.Component {
