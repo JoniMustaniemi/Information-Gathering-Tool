@@ -288,8 +288,9 @@ box-shadow: 2px 2px 5px #646464;
 }
 
 .tooltipChoice {
-  top:-350px;
-  left:-120px;
+  position: absolute;
+  right:28.5vw;
+  top:-1vh;
 }
 
 .radioType1 > input[type="radio"] {
@@ -298,13 +299,13 @@ box-shadow: 2px 2px 5px #646464;
 }
 
 .radioType1 {
-  margin-bottom: 1vh;
+  margin-bottom: 3vh;
   position: relative;
   top:-5vh;
   padding-left: 10px;
   padding-bottom: 10px;
+  max-height: 10px;
 }
-
 
 .choiceElement {
   width: 90%;
@@ -390,8 +391,8 @@ box-shadow: 2px 2px 5px #646464;
 }
 
 .formElementChoiceModify {
-  top:-48vh;
-  left:-25px;
+  top:-3.5vh;
+  left:-2.5vw;
 }
 
 .formElementSmall {

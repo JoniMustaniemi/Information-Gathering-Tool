@@ -3,6 +3,7 @@ import FormElementLarge from './FormElementLarge.js';
 import FormElementSmall from './FormElementSmall.js';
 import ButtonElement from './ButtonElement.js';
 import FormChoiceElement from './FormChoiceElement.js';
+import ModifyMenuElement from './ModifyMenuElement.js';
 
 class FormContainer extends React.Component {
 
