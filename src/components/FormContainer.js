@@ -36,7 +36,7 @@ class FormContainer extends React.Component {
           <FormElementSmall identifier="fs5" title="Estimate"/>
           </div>
           <div className="formRightBottom">
-          <FormChoiceElement/>
+          <FormChoiceElement identifier="choice" title="Type"/>
           </div>
         </div>
         <div className="formBottomRow">

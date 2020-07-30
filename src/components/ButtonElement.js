@@ -7,7 +7,6 @@ var formValues = [];
 class ButtonElement extends React.Component {
   
     render(props) {
-     
       if(this.props.name) {
        var name = this.capitalize(this.props.name);
       }
@@ -74,8 +73,6 @@ class ButtonElement extends React.Component {
       } else {
         element.classList.add("display-none");
       }
-      
-      
     }
 
     getValues() {
@@ -92,16 +89,20 @@ class ButtonElement extends React.Component {
     toggleModification(children) {
       let tooltipLargeHidden = "tooltip tooltipLarge display-none";
       let tooltiplargeVisible = "tooltip tooltipLarge active";
+
       let tooltipSmallHidden = "tooltip tooltipSmall display-none"
       let tooltipSmallVisible = "tooltip tooltipSmall active";
 
+      let tooltipChoiceVisible = "tooltip tooltipChoice active";
+      let tooltipChoiceHidden = "tooltip tooltipChoice display-none";
+
       for (let i = 0; i < children.length; i++) {
-       if(children[i].className === tooltipLargeHidden || children[i].className === tooltipSmallHidden) {
+       if(children[i].className === tooltipLargeHidden || children[i].className === tooltipSmallHidden || children[i].className === tooltipChoiceHidden) {
         this.checkForActiveMenus(children[i]); 
         children[i].classList.remove("display-none");
         children[i].classList.add("active");
        
-       } else if(children[i].className === tooltiplargeVisible|| children[i].className === tooltipSmallVisible) {
+       } else if(children[i].className === tooltiplargeVisible|| children[i].className === tooltipSmallVisible || children[i].className === tooltipChoiceVisible) {
          children[i].classList.add("display-none");
          children[i].classList.remove("active");
        }
@@ -125,7 +126,6 @@ class ButtonElement extends React.Component {
     }
 
     getFormValues(formElements) {
-     
       for (let i = 0; i < formElements.length; i++) {
         let tempObject = {};
         tempObject.id = formElements[i].children[1].id;

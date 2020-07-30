@@ -172,7 +172,7 @@ body {
   height: 5px;
   position: absolute;
   left:3px;
-  top:1px;
+  top:10px;
   
 }
 
@@ -244,10 +244,10 @@ width:25vw;
 font-size: 1em;
 resize: none;
 font-family: Monaco,Courier,monospace;
-box-shadow: 10px 10px 50px #646464;
+box-shadow: 2px 2px 5px #646464;
 }
 
-.tooltipLarge, .tooltipSmall {
+.tooltipLarge, .tooltipSmall, .tooltipChoice {
   background-color:#363636;
   width:80px;
   position: relative;
@@ -276,6 +276,7 @@ box-shadow: 10px 10px 50px #646464;
   top:-20vh;
 }
 
+
 .tooltipSmall {
   left:-120px;
   top:-30px;
@@ -287,13 +288,18 @@ box-shadow: 10px 10px 50px #646464;
   text-decoration-color: #f5f5f56b;
 }
 
+.tooltipChoice {
+  top:-350px;
+  left:-120px;
+}
+
 .choiceElement {
   background-color: white;
   width: 80%;
   height:41vh;
   border: 1px solid #242424;
   border-radius: 10px;
-  box-shadow: 10px 10px 50px #646464;
+  box-shadow: 2px 2px 5px #646464;
   margin-top: 20vh;
 }
 
@@ -308,7 +314,7 @@ box-shadow: 10px 10px 50px #646464;
   height: 20px;
   padding-left:10px;
   border: 1px solid #242424;
-  box-shadow: 10px 10px 50px #646464;
+  box-shadow: 2px 2px 5px #646464;
 }
 
 .sidePanel #login, .sidePanel #download, .sidePanel #logout { 
@@ -362,7 +368,7 @@ box-shadow: 10px 10px 50px #646464;
   display:none;
 }
 
-.formElementLargeModify , .formElementSmallModify {
+.formElementLargeModify , .formElementSmallModify, .formElementChoiceModify {
   position: relative;
 }
 
@@ -370,6 +376,11 @@ box-shadow: 10px 10px 50px #646464;
   margin:0;
   top:80px;
   right:25px;
+}
+
+.formElementChoiceModify {
+  top:-48vh;
+  left:-25px;
 }
 
 .formElementSmall {
@@ -396,7 +407,7 @@ box-shadow: 10px 10px 50px #646464;
 #submit {
 padding:5px;
 border: 1px solid #242424;
-box-shadow: 10px 10px 50px #646464;
+box-shadow: 2px 2px 5px #646464;
 
 }
 
