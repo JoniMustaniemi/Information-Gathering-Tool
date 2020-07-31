@@ -1,13 +1,7 @@
-const config = {
-  aws_table_name: 'Users',
-  aws_local_config: {
-    // Provide details for local configuration
-  },
-  aws_remote_config: {
-    accessKeyId: '',
-    secretAccessKey: '',
-    region: 'eu-west-2',
-  }
-};
+var myCredentials = new AWS.CognitoIdentityCredentials({IdentityPoolId:'eu-west-2_r6XKQ2dZV'});
+var myConfig = new AWS.Config({
+  credentials: myCredentials,
+  region: 'us-west-2'
+});
 
-export default config;
+export default myConfig;
