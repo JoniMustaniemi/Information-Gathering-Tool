@@ -1,7 +1,7 @@
 import config from './db_config';
 import AWS from 'aws-sdk';
 
-const getUSers = function(req, res) {
+const getUsers = function(req, res) {
   AWS.config.update(config.aws_remote_config);
 
   const docClient = new AWS.DynamoDB.DocumentClient();
