@@ -307,7 +307,7 @@ box-shadow: 2px 2px 5px #646464;
 
 .choiceElement {
   display: grid;
-  justify-content: center;
+  justify-content:center;
   width: 100%;
   height:auto;
   border-radius: 10px;
