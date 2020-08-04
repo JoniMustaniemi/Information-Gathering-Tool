@@ -37,9 +37,9 @@ class FormContainer extends React.Component {
           <h3 className="choiceElementTitle">Type</h3>
             <FormChoiceElement identifier="choice1" title="Placeholder Type 1"/>
             <FormChoiceElement identifier="choice2" title="Placeholder Type 2"/>
-            <FormChoiceElement identifier="choice2" title="Placeholder Type 3"/>
-            <FormChoiceElement identifier="choice2" title="Placeholder Type 4"/>
-            <FormChoiceElement identifier="choice2" title="Placeholder Type 5"/>
+            <FormChoiceElement identifier="choice3" title="Placeholder Type 3"/>
+            <FormChoiceElement identifier="choice4" title="Placeholder Type 4"/>
+            <FormChoiceElement identifier="choice5" title="Placeholder Type 5"/>
           </div>
           </div>
         </div>

@@ -16,7 +16,6 @@ class FormModifier extends React.Component {
       let color = "color";
       if(buttonID.includes(title)) {
         let inputField = document.getElementById(inputID);
-        console.log(inputID);
         this.changeFormTitle(this.props.formReference, inputField.value, inputField)
       } else if (buttonID.includes(color)) {
         let inputField = document.getElementById(this.props.formReference+"TextArea");
@@ -31,6 +30,7 @@ class FormModifier extends React.Component {
 
     changeFormTitle(formID, newValue, inputfield) {
       let formTitle = document.getElementById(formID);
+      console.log(formTitle);
       formTitle.innerHTML = newValue;
       inputfield.value = "";
     }

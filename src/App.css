@@ -78,7 +78,7 @@ body {
 
  .modifyButton {
    justify-self: center;
-   height:20px;
+   height: 20px;
    width: 20px;
  }
 
@@ -173,7 +173,6 @@ body {
   position: absolute;
   left:3px;
   top:10px;
-  
 }
 
 .green {
@@ -227,6 +226,7 @@ h3 {
   transform: scale(0.9);
 }
 
+
 .formBottomRow button:hover {
   color: whitesmoke;
 }
@@ -272,7 +272,7 @@ box-shadow: 2px 2px 5px #646464;
 
 .tooltipLarge {
   left:-120px;
-  top:-20vh;
+  top:-22vh;
 }
 
 .tooltipSmall {
@@ -287,8 +287,8 @@ box-shadow: 2px 2px 5px #646464;
 }
 
 .tooltipChoice {
-  top:-60px;
-  left:-140px;
+  top:-6vh;
+  left:-120px;
 }
 
 .radioType1 > input[type="radio"] {
@@ -314,6 +314,9 @@ box-shadow: 2px 2px 5px #646464;
   margin-top: 25vh;
 }
 
+.choiceElement input  {
+  margin-right: 15px;
+}
 
 .choiceElementTitle {
   position: relative;
@@ -395,12 +398,12 @@ box-shadow: 2px 2px 5px #646464;
 
 .formElementLargeModify {
   margin:0;
-  top:80px;
-  right:25px;
+  top:70px;
+  right:30px;
 }
 
 .formElementChoiceModify {
-  top:-2.5vh;
+  top:-3vh;
   left:-2.5vw;
 }
 
