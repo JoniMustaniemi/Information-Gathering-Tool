@@ -43,7 +43,7 @@ class FormContainer extends React.Component {
           </div>
           </div>
         </div>
-        <div className="formBottomRow">
+        <div className="formBottomRow display-none">
           <ButtonElement name="submit"/>
         </div>
       </div>

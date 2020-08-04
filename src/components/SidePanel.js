@@ -5,7 +5,7 @@ import LoginMenu from './LoginMenu.js';
 class SidePanel extends React.Component {
     render(props) {
      return <div id="sidepanel" className="sidePanel">
-        <div className="updateCycle green"></div>
+        <div className="updateCycle orange"></div>
        <div id="logoutButtonWrapper" className="display-none">
         <ButtonElement name="logout"/>
        </div>
@@ -18,4 +18,4 @@ class SidePanel extends React.Component {
     }
   }
 
-export default SidePanel
+export default SidePanel;

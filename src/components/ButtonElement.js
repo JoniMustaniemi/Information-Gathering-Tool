@@ -1,5 +1,5 @@
 import React from "react";
-
+import saveAs from "file-saver";
 
 var modifyMenus = [];
 var formValues = [];
@@ -20,6 +20,7 @@ class ButtonElement extends React.Component {
     }
 
     handleClickEvent(element) {
+      console.log(element.id);
       let formWrapper = element.parentNode.parentNode.parentNode;
     if(element.id === "modify") {
       this.toggleModification(formWrapper.children);
@@ -34,6 +35,9 @@ class ButtonElement extends React.Component {
     if(element.id === "submit") {
       // this.getValues();
     }
+  if(element.id === "download") {
+    this.getValues();
+  }
     if(element.id === "display") {
       console.log(element);
     }
@@ -85,11 +89,12 @@ class ButtonElement extends React.Component {
       formValues = [];
       let formElements = document.querySelectorAll(".formElement");   
       this.getFormValues(formElements);
-      this.saveData();
-      //TODO: save values in JSON ---- values are in form values
+      this.saveData(JSON.stringify(formValues, null, "\t"));
     }
 
-    saveData() {
+    saveData(data) {
+      var blob = new Blob([data], {type: "text/plain;charset=utf-8"});
+      saveAs(blob, "form_data.txt");
     }
 
     toggleModification(children) {
@@ -134,12 +139,12 @@ class ButtonElement extends React.Component {
     getFormValues(formElements) {
       for (let i = 0; i < formElements.length; i++) {
         let tempObject = {};
-        tempObject.id = formElements[i].children[1].id;
-        tempObject.text = formElements[i].children[2].value;
+        // tempObject.id = formElements[i].children[1].id;
         tempObject.title = formElements[i].children[1].innerHTML;
+        tempObject.text = formElements[i].children[2].value;
         formValues.push(tempObject);
     } 
-    console.log(formValues);
+    // console.log(formValues);
     }
 
     capitalize = (string) => {
