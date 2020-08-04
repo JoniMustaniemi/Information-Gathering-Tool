@@ -344,6 +344,10 @@ box-shadow: 2px 2px 5px #646464;
   filter: invert(1);
 }
 
+.sidePanel #login:active, .sidePanel #download:active, #logout:active, #display:active {
+  transform: scale(1);
+}
+
 .loginButton {
   outline: none;
   border-radius: 5px;
