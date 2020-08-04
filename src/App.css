@@ -347,6 +347,11 @@ box-shadow: 2px 2px 5px #646464;
   filter: invert(1);
 }
 
+.loginButton:hover {
+  transform: scale(1.05);
+  background-color: white;
+}
+
 .sidePanel #login:active, .sidePanel #download:active, #logout:active, #display:active {
   transform: scale(1);
 }
@@ -361,6 +366,11 @@ box-shadow: 2px 2px 5px #646464;
   border-right:none;
   margin-left:10px;
 }
+
+.loginButton:active {
+  transform: scale(1);
+}
+
 
 .sidePanel #display {
   margin-bottom:40vh;
