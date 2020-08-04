@@ -314,6 +314,7 @@ box-shadow: 2px 2px 5px #646464;
   margin-top: 25vh;
 }
 
+
 .choiceElementTitle {
   position: relative;
   top:-5vh;
@@ -328,7 +329,7 @@ box-shadow: 2px 2px 5px #646464;
   box-shadow: 2px 2px 5px #646464;
 }
 
-.sidePanel #login, .sidePanel #download, .sidePanel #logout { 
+.sidePanel #login, .sidePanel #download, .sidePanel #logout, .sidePanel #display { 
   background-size:cover;
   background-color: inherit;
   filter: invert(0.5);
@@ -338,7 +339,7 @@ box-shadow: 2px 2px 5px #646464;
   border: none;
 }
 
-.sidePanel #login:hover, .sidePanel #download:hover, #logout:hover {
+.sidePanel #login:hover, .sidePanel #download:hover, #logout:hover, #display:hover {
   transform: scale(1.05);
   filter: invert(1);
 }
@@ -352,6 +353,11 @@ box-shadow: 2px 2px 5px #646464;
   border-left: none;
   border-right:none;
   margin-left:10px;
+}
+
+.sidePanel #display {
+  margin-bottom:40vh;
+  background-size: contain;
 }
 
 .sidePanel button h4 {
@@ -408,11 +414,15 @@ box-shadow: 2px 2px 5px #646464;
 }
 
 .login {
-  margin-bottom: 75vh;
+  margin-bottom: 30vh;
 }
 
 .download button {
   background-image: url('./pics/download_icon.png');
+}
+
+#display {
+  background-image: url('./pics/display_data.png');
 }
 
 #submit {

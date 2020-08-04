@@ -8,7 +8,10 @@ class ButtonElement extends React.Component {
   
     render(props) {
       if(this.props.name) {
-       var name = this.capitalize(this.props.name);
+        var name = this.capitalize(this.props.name);
+       if(name === "Display") {
+        name+= ' data';
+       }
       }
      
      return  <div className={this.props.name + " iconContainer"}>
@@ -29,7 +32,10 @@ class ButtonElement extends React.Component {
       this.logOut();
     }
     if(element.id === "submit") {
-      this.getValues();
+      // this.getValues();
+    }
+    if(element.id === "display") {
+      console.log(element);
     }
     }
 
