@@ -87,7 +87,7 @@ class ButtonElement extends React.Component {
 
     getValues() {
       formValues = [];
-      let formElements = document.querySelectorAll(".formElement");   
+      let formElements = document.querySelectorAll(".formElement");
       this.getFormValues(formElements);
       this.saveData(JSON.stringify(formValues, null, "\t"));
     }
@@ -143,9 +143,25 @@ class ButtonElement extends React.Component {
         tempObject.title = formElements[i].children[1].innerHTML;
         tempObject.text = formElements[i].children[2].value;
         formValues.push(tempObject);
-    } 
-    // console.log(formValues);
     }
+    let tempObject = {};
+    const selectedType = this.getTypeSelectionValues();
+    tempObject.title = "Type";
+    tempObject.type = selectedType;
+    formValues.push(tempObject);
+    }
+
+    getTypeSelectionValues() {
+      const typeSelections = document.querySelectorAll(".radioType1");
+      for (let i = 0; i < typeSelections.length; i++) {
+        if(typeSelections[i].children[0].checked === true) {
+          return typeSelections[i].children[1].innerHTML;
+        }
+        
+      }
+     
+    }
+
 
     capitalize = (string) => {
       if (typeof string !== 'string') return ''
