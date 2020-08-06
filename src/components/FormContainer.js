@@ -3,6 +3,7 @@ import FormElementLarge from './FormElementLarge.js';
 import FormElementSmall from './FormElementSmall.js';
 import ButtonElement from './ButtonElement.js';
 import FormChoiceElement from './FormChoiceElement.js';
+import form_background from '../pics/form_background.jpg';
 
 class FormContainer extends React.Component {
 
@@ -10,6 +11,9 @@ class FormContainer extends React.Component {
     render(props) {
     return <div>
       <div id="formWrapper" className="formContainer animated">
+        <div className="rotate">
+      <img className="formBackground" src={form_background} alt="beautiful background should be here"></img>
+       </div>
         <div className="formTopRow">
           <FormElementSmall identifier="fs1" title="[Title]"/>
           <FormElementSmall identifier="fs2" title="[Title]"/>
@@ -46,7 +50,9 @@ class FormContainer extends React.Component {
         <div className="formBottomRow display-none">
           <ButtonElement name="submit"/>
         </div>
+        
       </div>
+      
       </div> 
     }
     handleClickEvent() {

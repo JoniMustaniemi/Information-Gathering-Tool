@@ -4,13 +4,38 @@ body {
 }
 
 .sidePanel {
-  background-color: #242424;
+  background-color: #1b262c;
   margin-left: -1px;
   width: 120px;
   height: 100vh;
   position: absolute;
-  border-right: 2px groove whitesmoke;
+  border-right: 2px groove slategray;
   padding-top: 10px;
+}
+
+.formBackground {
+  position: absolute;
+  width: auto;
+  height: auto;
+  min-width: 100vw;
+  min-height: 100vh;
+  filter: blur(8px);
+  transform: scale(10);
+  z-index: -1000;
+}
+
+.rotate {
+  animation: rotation 120s infinite linear;
+  z-index: -20;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 
 .formLeft, .formCenter {
@@ -22,31 +47,26 @@ body {
   margin-right: 50px;
 }
 
-
 .formRight {
   padding-top:25vh;
   width:100%;
 }
 
 .formRightPart1 {
-  width: 48%;
+  max-width: 48%;
   float: left;
 }
 
 .formRightPart2 {
-  width: 48%;
-  margin-left:2%;
-  float:right;
+  max-width: 48%;
+  margin-left:6%;
+  float:left;
 }
 
 .formRightBottom {
-  margin-top:15vh;
+  margin-top:20vh;
   height: 49vh;
   width:100%;
-}
-
-#fl5 {
-  margin-bottom:-15px;
 }
 
 #fl5TextArea {
@@ -58,7 +78,7 @@ body {
  }
 
  .loginWrapper {
-   background-color: #242424;
+   background-color: #1b262c;
    border-radius:5px;
    color: whitesmoke;
    text-align: center;
@@ -138,18 +158,16 @@ body {
   margin-left:120px;
   display: flex;
   justify-content: space-evenly;
- 
 }
 
 .formContainer {
-  width: auto;
-  background-color:lightgrey;
+  max-width: 80vw;
+  margin-left:240px;
+  padding-left:10vw;
   height:100vh;
   display: flex;
-  margin-left:150px;
-  justify-content: left;
+  justify-content: center;
 }
-
 
 .formContainer > * {
   font-family: Monaco,Courier,monospace;
@@ -159,10 +177,6 @@ body {
  transition: all 0.5s ease-in;
 }
 
-.formElementLarge {
-  height: 50px;
-  margin-bottom: 20vh;
-}
 
 .updateCycle {
   background-color: lightgrey;
@@ -183,22 +197,29 @@ body {
   background-color: orange;
 }
 
-h3 {
+h3, label {
   font-size: 1em;
   margin:0;
   margin-bottom:5px;
   max-width: 30vw;
   min-height:45px;
+  color: #fdcb9e;
+  filter: saturate(0.4);
   overflow-wrap: break-word;
+  text-shadow: 1px 0 0 #1b262c, -1px 0 0 #1b262c, 0 1px 0 #1b262c, 0 -1px 0 #1b262c, 1px 1px #1b262c, -1px -1px 0 #1b262c, 1px -1px 0 #1b262c, -1px 1px 0 #1b262c;
 }
 
 .formTopRow {
-  width: 80%;
+  width: 42%;
   height: 60px;
   position: absolute;
   top:5vh;
+  left:380px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content:space-evenly;
+}
+
+.formTopRow input {
 }
 
 .divider {
@@ -235,19 +256,20 @@ h3 {
 border-radius:10px;
 padding-left:5px;
 padding-top:5px;
-border: 1px solid #242424;
+border: 1px solid #1b262c;
 background-color: whitesmoke;
 outline:none;
 height: 20vh;
-width:25vw;
+width:20vw;
 font-size: 1em;
 resize: none;
 font-family: Monaco,Courier,monospace;
 box-shadow: 2px 2px 5px #646464;
+opacity: 0.6;
 }
 
 .tooltipLarge, .tooltipSmall, .tooltipChoice {
-  background-color:#363636;
+  background-color:#1b262c;
   width:80px;
   position: relative;
   border: 1px groove whitesmoke;
@@ -287,13 +309,14 @@ box-shadow: 2px 2px 5px #646464;
 }
 
 .tooltipChoice {
-  top:-6vh;
-  left:-120px;
+  top:-5vh;
+  left:-7.5vw;
 }
 
 .radioType1 > input[type="radio"] {
  transform: scale(2);
  filter: grayscale(0.8);
+ opacity: 0.6;
 }
 
 .radioType1 {
@@ -307,11 +330,11 @@ box-shadow: 2px 2px 5px #646464;
 
 .choiceElement {
   display: grid;
-  justify-content:center;
+  justify-content:start;
   width: 100%;
   height:auto;
   border-radius: 10px;
-  margin-top: 25vh;
+  margin-left:2vw;
 }
 
 .choiceElement input  {
@@ -328,8 +351,9 @@ box-shadow: 2px 2px 5px #646464;
   border-radius: 10px;
   height: 20px;
   padding-left:10px;
-  border: 1px solid #242424;
+  border: 1px solid #1b262c;
   box-shadow: 2px 2px 5px #646464;
+  opacity: 0.6;
 }
 
 .sidePanel #login, .sidePanel #download, .sidePanel #logout, .sidePanel #display { 
@@ -413,8 +437,8 @@ box-shadow: 2px 2px 5px #646464;
 }
 
 .formElementChoiceModify {
-  top:-3vh;
-  left:-2.5vw;
+  top:-25px;
+  left:-40px;
 }
 
 .formElementSmall {
@@ -444,7 +468,7 @@ box-shadow: 2px 2px 5px #646464;
 
 #submit {
 padding:5px;
-border: 1px solid #242424;
+border: 1px solid #1b262c;
 box-shadow: 2px 2px 5px #646464;
 
 }
