@@ -330,7 +330,7 @@ max-height: 200px;
 
 .tooltipLarge {
   left:-120px;
-  top:-22vh;
+  top:-3vh;
 }
 
 .tooltipSmall {
@@ -464,7 +464,7 @@ max-height: 200px;
 
 .formElementLargeModify {
   margin:0;
-  top:70px;
+  top:85px;
   right:30px;
 }
 
@@ -483,22 +483,22 @@ max-height: 200px;
 }
 
 .formLeft .formElementSmallModify, .formCenter .formElementSmallModify {
-  top: -5vh;
+  top: -20vh;
   left: -30px;
 }
 
 .formLeft .tooltipSmall, .formCenter .tooltipSmall{
-  top:-7vh;
+  top:-22vh;
 }
 
 .fs3 #modify {
 position: relative;
-top:-12vh;
+top:-27.8vh;
 left: -5px;
 }
 
 .fs3 .tooltipSmall {
-  top:-7vh;
+  top:-23vh;
 }
 
 
