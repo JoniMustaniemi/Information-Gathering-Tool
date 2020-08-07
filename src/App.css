@@ -44,19 +44,19 @@ body {
   }
 }
 
-.formLeft, .formCenter {
-  padding-top:15vh;
+.formLeft, .formCenter{
+  padding-top:35vh;
 }
 
 .formLeft .inputElementSmall, .formCenter .inputElementSmall, #fs3TextArea  {
   position: absolute;
-  top:9.9vh;
+  top:15vh;
   justify-self: center;
 }
 
 .formLeft #fs1, .formCenter #fs2, .formRight #fs3 {
   position: absolute;
-  top: 7vh;
+  top: 9vh;
 }
 
 .formCenter {
@@ -65,7 +65,7 @@ body {
 }
 
 .formRight {
-  padding-top:15vh;
+  padding-top:36vh;
   width:100%;
 }
 
@@ -265,19 +265,43 @@ h3, label {
 }
 
 .inputElementLarge {
-border-radius:10px;
+cursor: text;
 padding-left:5px;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
 padding-top:5px;
-border: 1px solid #1b262c;
-background-color: whitesmoke;
+border:0;
+border-bottom: 2px solid silver;
+color: whitesmoke;
+background-color: transparent;
 outline:none;
-height: 20vh;
+height: 30px;
 width:20vw;
 font-size: 1.2em;
-resize: none;
 font-family: Monaco,Courier,monospace;
-box-shadow: 2px 2px 5px #646464;
-opacity: 0.6;
+max-width:20vw;
+max-height: 200px;
+}
+
+.inputElementSmall {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  font-size: 1.2em;
+  outline:none;
+  color:whitesmoke;
+  cursor: text;
+  height: 20px;
+  padding-left:10px;
+  background-color: transparent;
+  border:0;
+  border-bottom: 2px solid silver;
+  opacity: 0.6;
+  font-family: Monaco,Courier,monospace;
+}
+
+.inputElementLarge:focus, .inputElementSmall:focus {
+  border-bottom:2px solid white;
+  background-color: rgba(255, 255, 255, 0.075);
 }
 
 .tooltipLarge, .tooltipSmall, .tooltipChoice {
@@ -302,7 +326,6 @@ opacity: 0.6;
   background-color:inherit;
   margin-bottom: 5px;
   outline:none;
-
 }
 
 .tooltipLarge {
@@ -359,15 +382,6 @@ opacity: 0.6;
   top:-5vh;
 }
 
-.inputElementSmall {
-  outline:none;
-  border-radius: 10px;
-  height: 20px;
-  padding-left:10px;
-  border: 1px solid #1b262c;
-  box-shadow: 2px 2px 5px #646464;
-  opacity: 0.6;
-}
 
 .sidePanel #login, .sidePanel #download, .sidePanel #logout, .sidePanel #display { 
   background-size:cover;
@@ -507,7 +521,7 @@ left: -5px;
 #submit {
 padding:5px;
 border: 1px solid #1b262c;
-box-shadow: 2px 2px 5px #646464;
+box-shadow: 2px 2px 5px #1b262c;
 
 }
 
