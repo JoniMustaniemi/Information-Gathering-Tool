@@ -13,14 +13,20 @@ body {
   padding-top: 10px;
 }
 
+.dark {
+  filter: brightness(0.4);
+  z-index: -1;
+}
+
 .formBackground {
   position: absolute;
-  width: auto;
-  height: auto;
+  left:-20vw;
+  width: 100vw;
+  height: 100vh;
   min-width: 100vw;
   min-height: 100vh;
   filter: blur(8px);
-  transform: scale(10);
+  transform: scale(2);
   z-index: -1000;
 }
 
@@ -39,7 +45,18 @@ body {
 }
 
 .formLeft, .formCenter {
-  padding-top:25vh;
+  padding-top:15vh;
+}
+
+.formLeft .inputElementSmall, .formCenter .inputElementSmall, #fs3TextArea  {
+  position: absolute;
+  top:9.9vh;
+  justify-self: center;
+}
+
+.formLeft #fs1, .formCenter #fs2, .formRight #fs3 {
+  position: absolute;
+  top: 7vh;
 }
 
 .formCenter {
@@ -48,9 +65,11 @@ body {
 }
 
 .formRight {
-  padding-top:25vh;
+  padding-top:15vh;
   width:100%;
 }
+
+
 
 .formRightPart1 {
   max-width: 48%;
@@ -67,10 +86,6 @@ body {
   margin-top:20vh;
   height: 49vh;
   width:100%;
-}
-
-#fl5TextArea {
-  height:40.5vh;
 }
 
 .opacity-0 { 
@@ -132,7 +147,7 @@ body {
   width:80%;
   height:20px;
   outline:none;
-  font-size: 0.7em;
+  font-size: 1em;
   margin-bottom:5px;
  }
 
@@ -198,7 +213,7 @@ body {
 }
 
 h3, label {
-  font-size: 1em;
+  font-size: 1.2em;
   margin:0;
   margin-bottom:5px;
   max-width: 30vw;
@@ -219,12 +234,9 @@ h3, label {
   justify-content:space-evenly;
 }
 
-.formTopRow input {
-}
-
 .divider {
   width: 100%;
-  height:5vh;
+  height:10vh;
 }
 
 .formBottomRow {
@@ -261,7 +273,7 @@ background-color: whitesmoke;
 outline:none;
 height: 20vh;
 width:20vw;
-font-size: 1em;
+font-size: 1.2em;
 resize: none;
 font-family: Monaco,Courier,monospace;
 box-shadow: 2px 2px 5px #646464;
@@ -281,6 +293,7 @@ opacity: 0.6;
   z-index: 3;
   padding-bottom:10px;
 }
+
 
 .modifyMenuElement {
   width: 100%;
@@ -430,6 +443,11 @@ opacity: 0.6;
   position: relative;
 }
 
+.formElementLarge {
+  max-height: 100px;
+  margin-bottom: 10vh;
+}
+
 .formElementLargeModify {
   margin:0;
   top:70px;
@@ -449,6 +467,26 @@ opacity: 0.6;
   top: 70px;
   right: 25px;
 }
+
+.formLeft .formElementSmallModify, .formCenter .formElementSmallModify {
+  top: -5vh;
+  left: -30px;
+}
+
+.formLeft .tooltipSmall, .formCenter .tooltipSmall{
+  top:-7vh;
+}
+
+.fs3 #modify {
+position: relative;
+top:-12vh;
+left: -5px;
+}
+
+.fs3 .tooltipSmall {
+  top:-7vh;
+}
+
 
 .login button, .logout button {
   background-image: url('./pics/login_icon.png');
