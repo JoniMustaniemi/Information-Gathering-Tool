@@ -13,7 +13,7 @@ class FormElementSmall extends React.Component {
       <input id={this.props.identifier+"TextArea"} className="inputElementSmall" type="text"/>
       <div className="tooltip tooltipSmall display-none">
       <ModifyMenuElement formReference={this.props.identifier} identifier="title" title="change form title" />
-      <ModifyMenuElement formReference={this.props.identifier} identifier="color" title="change form color" />
+     {/*  <ModifyMenuElement formReference={this.props.identifier} identifier="color" title="change form color" /> */}
     </div>
     </div>
     }
