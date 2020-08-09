@@ -307,22 +307,20 @@ h3, label {
 .inputElementLarge {
 cursor: text;
 padding-left:5px;
-border-top-left-radius: 10px;
-border-top-right-radius: 10px;
+border-radius: 10px;
 padding-top:5px;
 border:0;
-border-bottom: 2px solid silver;
 color: whitesmoke;
-background-color: transparent;
+background-color: #ffffff13;
 outline:none;
-height: 30px;
+height: 20vw;
 width:20vw;
 font-size: 1em;
 font-family: Monaco,Courier,monospace;
 max-width:20vw;
 max-height: 20vh;
 min-height: 30px;
-resize: vertical;
+resize: none;
 }
 
 .inputElementSmall {
@@ -334,7 +332,6 @@ resize: vertical;
   color:whitesmoke;
   cursor: text;
   height: 20px;
-  padding-left:10px;
   background-color: transparent;
   border:0;
   border-bottom: 2px solid silver;
@@ -342,9 +339,8 @@ resize: vertical;
   font-family: Monaco,Courier,monospace;
 }
 
-.inputElementLarge:focus, .inputElementSmall:focus{
+.inputElementSmall:focus{
   border-bottom:2px solid white;
-  background-color: rgba(255, 255, 255, 0.075);
 }
 
 .tooltipLarge, .tooltipSmall, .tooltipChoice {
@@ -374,7 +370,7 @@ resize: vertical;
 
 .tooltipLarge {
   left:-120px;
-  top:-3vh;
+  top:-19.5vh;
 }
 
 .tooltipSmall {
