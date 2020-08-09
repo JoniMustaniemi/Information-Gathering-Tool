@@ -284,6 +284,7 @@ font-size: 1em;
 font-family: Monaco,Courier,monospace;
 max-width:20vw;
 max-height: 20vh;
+min-height: 30px;
 resize: vertical;
 }
 
