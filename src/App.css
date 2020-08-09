@@ -350,8 +350,8 @@ resize: vertical;
 }
 
 .tooltipChoice {
-  top:-6.6vh;
-  left:-10vw;
+  top:-3.6vh;
+  left:-130px;
 }
 
 .radioType1 > input[type="radio"] {
