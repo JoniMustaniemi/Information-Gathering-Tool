@@ -10,7 +10,7 @@ body {
   height: 100vh;
   position: absolute;
   border-right: 2px groove slategray;
-  padding-top: 10px;
+  padding-top: 50px;
   z-index: 10;
 }
 
