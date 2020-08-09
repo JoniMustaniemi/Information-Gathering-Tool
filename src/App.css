@@ -10,7 +10,7 @@ body {
   height: 100vh;
   position: absolute;
   border-right: 2px groove slategray;
-  padding-top: 50px;
+  padding-top: 20px;
   z-index: 10;
 }
 
@@ -563,6 +563,7 @@ resize: vertical;
 
 .login button, .logout button {
   background-image: url('./pics/login_icon.png');
+  margin-top:5vh;
 }
 
 .login {
