@@ -35,9 +35,31 @@ body {
   position: absolute;
   top:0;
   width: 100vw;
-  height:100vh;
-  z-index: 1;
+  height:110vh;
+  z-index: 0;
 }
+
+.arrow_icon {
+  filter: invert(0.4);
+  width: 40px;
+  height:40px;
+  z-index: 3000;
+  margin-top:30px;
+}
+
+.returnButton {
+ 
+}
+
+.returnButton > img:hover {
+  filter: invert(0.7);
+  transform: scale(1.1);
+}
+
+.returnButton > img:active {
+  transform: scale(0.9);
+}
+
 
 .rotate {
   animation: rotation 120s infinite linear;
@@ -193,9 +215,9 @@ body {
 .formContainer {
   overflow: hidden;
   max-width: 100vw;
-  margin-left:5vw;
+  margin-left:4.2vw;
   padding-left:10vw;
-  height:100vh;
+  height:110vh;
   display: flex;
   justify-content: center;
   opacity: 1;
@@ -422,6 +444,35 @@ resize: vertical;
 .sidePanel #login:hover, .sidePanel #download:hover, #logout:hover, #display:hover {
   transform: scale(1.05);
   filter: invert(1);
+}
+
+.displayDataForm #return {
+  margin-left:160px;
+  margin-top:20px;
+  width: 40px;
+  height: 40px;
+  background-size:cover;
+  background-color: inherit;
+  border: none;
+  filter: invert(0.5);
+  outline:none;
+  background-image: url('./pics/arrow.png');
+}
+
+.displayDataForm h1 {
+  color: whitesmoke;
+  position: absolute;
+  top:40vh;
+  left:48vw;
+}
+
+#return:hover {
+  filter: invert(0.8);
+  transform: scale(1.1);
+}
+
+#return:active {
+  transform: scale(0.9);
 }
 
 .loginButton:hover {

@@ -1,8 +1,5 @@
 import React, {Component} from "react"
 
-
-
-
 class FormElement extends React.Component {
     render(props) {
     return <div className="formElement animated">

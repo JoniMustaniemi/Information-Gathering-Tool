@@ -3,7 +3,7 @@ import FormElementLarge from './FormElementLarge.js';
 import FormElementSmall from './FormElementSmall.js';
 import ButtonElement from './ButtonElement.js';
 import FormChoiceElement from './FormChoiceElement.js';
-import form_background from '../pics/form_background.jpg';
+/* import form_background from '../pics/form_background.jpg'; */
 
 class FormContainer extends React.Component {
 
@@ -12,7 +12,7 @@ class FormContainer extends React.Component {
     return <div>
       <div id="formWrapper" className="formContainer animated">
         <div className="dark">
-      <img className="formBackground" src={form_background} alt="beautiful background should be here"></img>
+     {/*  <img className="formBackground" src={form_background} alt="beautiful background should be here"></img> */}
       </div>
         <div className="formLeft">
         <FormElementSmall identifier="fs1" title="[Title]"/>
@@ -52,8 +52,12 @@ class FormContainer extends React.Component {
         </div>
         
       </div>
-      <div className="displayDataForm"></div>
-      
+      <div id="displayDataContainer" className="displayDataForm animated display-none opacity-0">
+          <ButtonElement name="return"/>
+          <h1>Nothing here yet</h1>
+          {/*  <button className="returnButton animated"><img className="arrow_icon" src={arrow} alt="arrow"/></button> */}
+      </div>
+     
       </div> 
     }
     handleClickEvent() {

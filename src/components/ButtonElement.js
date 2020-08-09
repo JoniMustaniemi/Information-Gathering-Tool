@@ -12,6 +12,9 @@ class ButtonElement extends React.Component {
        if(name === "Display") {
         name+= ' data';
        }
+       if(name === "Return") {
+         name = null;
+       }
       }
      
      return  <div className={this.props.name + " iconContainer"}>
@@ -40,13 +43,33 @@ class ButtonElement extends React.Component {
   }
     if(element.id === "display") {
      let formContainer =  document.getElementById("formWrapper");
-     this.hideElement(formContainer);      
+     let displayDataContainer = document.getElementById("displayDataContainer");
+     this.hideElementShowElement(formContainer, displayDataContainer);
+    }
+    if(element.id === "return") {
+      let formContainer =  document.getElementById("formWrapper");
+      let displayDataContainer = document.getElementById("displayDataContainer");
+      this.hideElementShowElement(displayDataContainer,formContainer);
     }
     }
 
-    hideElement(element) {
-      element.classList.add("opacity-0");
-      element.classList.add("transparent-background");
+    hideElementShowElement(elementToHide, elementToShow) {
+      this.hideElement(elementToHide);
+      this.showElement(elementToShow);
+    }
+
+    hideElement(elementToHide) {
+      elementToHide.classList.add("opacity-0");
+      setTimeout(function () {
+           elementToHide.classList.add("display-none");
+    }, 1200);
+    }
+
+    showElement(elementToShow) {
+      elementToShow.classList.remove("display-none");
+      setTimeout(function () {
+           elementToShow.classList.remove("opacity-0");
+    }, 500);
     }
 
     logOut() {
@@ -167,8 +190,6 @@ class ButtonElement extends React.Component {
       }
      
     }
-
-
     capitalize = (string) => {
       if (typeof string !== 'string') return ''
       return string.charAt(0).toUpperCase() + string.slice(1)
