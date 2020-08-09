@@ -11,25 +11,33 @@ class FormContainer extends React.Component {
     render(props) {
     return <div>
       <div id="formWrapper" className="formContainer animated">
+      <div className="formTopRow animated">
+            <div className="topFs1">
+            <FormElementSmall identifier="fs1" title="[Title]"/>
+            </div>
+            <div  className="topFs2">
+            <FormElementSmall identifier="fs2" title="[Title]"/>
+            </div>
+            <div  className="topFs3">
+            <FormElementSmall identifier="fs3" title="[Title]"/>
+            </div>
+          </div>
         <div className="dark">
+         
      {/*  <img className="formBackground" src={form_background} alt="beautiful background should be here"></img> */}
       </div>
         <div className="formLeft">
-        <FormElementSmall identifier="fs1" title="[Title]"/>
           <FormElementLarge identifier="fl1" title="Placeholder title 1"/>
           <div className="divider"></div>
           <FormElementLarge identifier="fl2" title="Placeholder title 2"/>
         </div>
         <div className="formCenter">
-        <FormElementSmall identifier="fs2" title="[Title]"/>
           <FormElementLarge identifier="fl3" title="Placeholder title 3"/>
           <div className="divider"></div>
           <FormElementLarge identifier="fl4" title="Placeholder title 4"/>
         </div>
         <div className="formRight">
-          <div className="fs3">
-          <FormElementSmall identifier="fs3" title="[Title]"/>
-          </div>
+        
           <div className="formRightPart1">
           <FormElementSmall identifier="fs4" title="[Title]"/>
           </div>
