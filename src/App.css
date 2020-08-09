@@ -563,7 +563,7 @@ resize: vertical;
 
 .login button, .logout button {
   background-image: url('./pics/login_icon.png');
-  margin-top:5vh;
+  margin-top:80px;
 }
 
 .login {
