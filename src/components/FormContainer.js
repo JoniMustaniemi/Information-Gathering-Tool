@@ -52,6 +52,7 @@ class FormContainer extends React.Component {
         </div>
         
       </div>
+      <div className="displayDataForm"></div>
       
       </div> 
     }

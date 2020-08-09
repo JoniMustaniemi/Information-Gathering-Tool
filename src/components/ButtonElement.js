@@ -39,8 +39,14 @@ class ButtonElement extends React.Component {
     this.getValues();
   }
     if(element.id === "display") {
-      console.log(element);
+     let formContainer =  document.getElementById("formWrapper");
+     this.hideElement(formContainer);      
     }
+    }
+
+    hideElement(element) {
+      element.classList.add("opacity-0");
+      element.classList.add("transparent-background");
     }
 
     logOut() {
