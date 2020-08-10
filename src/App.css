@@ -85,8 +85,6 @@ body {
   width:100%;
 }
 
-
-
 .formRightPart1, .formRightPart2 {
   max-width: 10vw;
   display: grid;
@@ -266,6 +264,7 @@ h3, label {
   text-shadow: 1px 0 0 #1b262c, -1px 0 0 #1b262c, 0 1px 0 #1b262c, 0 -1px 0 #1b262c, 1px 1px #1b262c, -1px -1px 0 #1b262c, 1px -1px 0 #1b262c, -1px 1px 0 #1b262c;
 }
 
+
 .formTopRow {
   height: 60px;
   position: absolute;
@@ -347,6 +346,8 @@ resize: none;
   opacity: 0.6;
   font-family: Monaco,Courier,monospace;
 }
+
+
 
 .inputElementSmall:focus{
   border-bottom:2px solid white;
@@ -444,7 +445,7 @@ resize: none;
 }
 
 
-.sidePanel #login:hover, .sidePanel #download:hover, #logout:hover, #display:hover {
+.sidePanel #login:hover, .sidePanel #download:hover, #logout:hover, #display:hover  {
   transform: scale(1.05);
   filter: invert(1);
 }
@@ -588,6 +589,10 @@ resize: none;
 
 #display {
   background-image: url('./pics/display_data.png');
+}
+
+#display button {
+  background-color: coral;
 }
 
 #submit {
