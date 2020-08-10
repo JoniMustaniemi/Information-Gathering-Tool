@@ -4,7 +4,6 @@ import ModifyMenuElement from './ModifyMenuElement.js';
 
 class FormElementLarge extends React.Component {
 
-  
     render(props) {
     return <div className="formElementLarge animated formElement">
     <div className="formElementLargeModify modifyButton display-none">

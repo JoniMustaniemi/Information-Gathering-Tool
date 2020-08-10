@@ -3,6 +3,7 @@ import saveAs from "file-saver";
 
 var modifyMenus = [];
 var formValues = [];
+var localModification = window.localStorage;
 
 class ButtonElement extends React.Component {
   
@@ -27,7 +28,6 @@ class ButtonElement extends React.Component {
       let formWrapper = element.parentNode.parentNode.parentNode;
     if(element.id === "modify") {
       this.toggleModification(formWrapper.children);
-    
     } if(element.id === "login") {
       this.emptyfields("login");
       this.toggleLoginMenu();
@@ -35,9 +35,8 @@ class ButtonElement extends React.Component {
     if(element.id === "logout") {
       this.logOut();
     }
-    if(element.id === "submit") {
-      // this.getValues();
-      this.initializeLocalStorage();
+    if(element.id === "save") {
+      this.saveValues();
     }
   if(element.id === "download") {
     this.getValues();
@@ -54,10 +53,15 @@ class ButtonElement extends React.Component {
     }
     }
 
-    initializeLocalStorage() {
-     const  myStorage = window.localStorage;
-     myStorage.testKey = "testValue";
-     
+    saveValues() {
+      formValues = [];
+      let formElements = document.querySelectorAll(".formElement");
+      this.getFormValues(formElements);
+      console.log(formValues);
+      for (let i = 0; i < formValues.length; i++) {
+       console.log(formValues[i].id);
+       localModification.setItem('id', formValues[0].id);
+      }
     }
 
     hideElementShowElement(elementToHide, elementToShow) {
@@ -110,7 +114,6 @@ class ButtonElement extends React.Component {
         password.value = "";
       }
     }
-
 
     toggleLoginMenu() {
       let element = document.getElementById("loginContainer");
@@ -175,7 +178,7 @@ class ButtonElement extends React.Component {
     getFormValues(formElements) {
       for (let i = 0; i < formElements.length; i++) {
         let tempObject = {};
-        // tempObject.id = formElements[i].children[1].id;
+        tempObject.id = formElements[i].children[1].id;
         tempObject.title = formElements[i].children[1].innerHTML;
         tempObject.text = formElements[i].children[2].value;
         formValues.push(tempObject);
