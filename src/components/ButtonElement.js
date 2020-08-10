@@ -37,6 +37,7 @@ class ButtonElement extends React.Component {
     }
     if(element.id === "submit") {
       // this.getValues();
+      this.initializeLocalStorage();
     }
   if(element.id === "download") {
     this.getValues();
@@ -51,6 +52,12 @@ class ButtonElement extends React.Component {
       let displayDataContainer = document.getElementById("displayDataContainer");
       this.hideElementShowElement(displayDataContainer,formContainer);
     }
+    }
+
+    initializeLocalStorage() {
+     const  myStorage = window.localStorage;
+     myStorage.testKey = "testValue";
+     
     }
 
     hideElementShowElement(elementToHide, elementToShow) {

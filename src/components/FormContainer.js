@@ -55,7 +55,7 @@ class FormContainer extends React.Component {
           </div>
           </div>
         </div>
-        <div className="formBottomRow display-none">
+        <div className="formBottomRow">
           <ButtonElement name="submit"/>
         </div>
         
@@ -63,7 +63,6 @@ class FormContainer extends React.Component {
       <div id="displayDataContainer" className="displayDataForm animated display-none opacity-0">
           <ButtonElement name="return"/>
           <h1>Nothing here yet</h1>
-          {/*  <button className="returnButton animated"><img className="arrow_icon" src={arrow} alt="arrow"/></button> */}
       </div>
      
       </div> 
