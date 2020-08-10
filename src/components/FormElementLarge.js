@@ -14,7 +14,7 @@ class FormElementLarge extends React.Component {
     <textarea rows="1" id={this.props.identifier+"TextArea"} className="inputElementLarge" type="text"/>
     <div className="tooltip tooltipLarge display-none">
       <ModifyMenuElement formReference={this.props.identifier} identifier="title" title="change form title" />
-     {/*  <ModifyMenuElement formReference={this.props.identifier} identifier="color" title="change form color" /> */}
+     <ModifyMenuElement formReference={this.props.identifier} identifier="color" title="change form color" />
     </div>
     </div>
     }

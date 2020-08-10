@@ -114,6 +114,9 @@ body {
 
  .loginWrapper {
    background-color: #1b262c;
+   border-top-right-radius: 1px solid whitesmoke;
+   border-right: 1px solid whitesmoke;
+   border-bottom: 1px solid whitesmoke;
    border-radius:5px;
    color: whitesmoke;
    text-align: center;
@@ -310,8 +313,8 @@ padding-left:5px;
 border-radius: 10px;
 padding-top:5px;
 border:0;
-color: whitesmoke;
-background-color: #ffffff13;
+color: black;
+background-color: #ffffffc0;
 outline:none;
 height: 20vw;
 width:20vw;
@@ -320,6 +323,8 @@ font-family: Monaco,Courier,monospace;
 max-width:20vw;
 max-height: 20vh;
 min-height: 30px;
+border: 1px solid #181818c0;
+box-shadow: inset 1px 1px 1px #10181d;
 resize: none;
 }
 
@@ -433,6 +438,7 @@ resize: none;
   width: 50px;
   border: none;
 }
+
 
 .sidePanel #login:hover, .sidePanel #download:hover, #logout:hover, #display:hover {
   transform: scale(1.05);
@@ -573,6 +579,7 @@ resize: none;
 
 .download button {
   background-image: url('./pics/download_icon.png');
+  margin-top:-15vh;
 }
 
 #display {
@@ -598,9 +605,7 @@ box-shadow: 2px 2px 5px #1b262c;
 .iconContainer button:active {
   transform: scale(0.95);
   outline:none;
-  
 }
-
 
 .inputElementLarge::-webkit-scrollbar {
   width: 10px;              
