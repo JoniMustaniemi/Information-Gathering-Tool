@@ -7,7 +7,7 @@ class FormChoiceElement extends React.Component {
     render(props) {
     return <div>
       <div className="radioType1">
-      <input type="radio" name="typechoice" value={this.props.title}/>
+      <input type="radio" name="typechoice"/>
     <label htmlFor="choice1" id={this.props.identifier}> {this.props.title}</label><br/>
     <div className="formElementChoiceModify modifyButton display-none">
           <ButtonElement name="modify" target={this}/>

@@ -3,7 +3,6 @@ import saveAs from "file-saver";
 
 var modifyMenus = [];
 var formValues = [];
-var localModification = window.localStorage;
 
 class ButtonElement extends React.Component {
   
@@ -24,7 +23,6 @@ class ButtonElement extends React.Component {
     }
 
     handleClickEvent(element) {
-      console.log(element.id);
       let formWrapper = element.parentNode.parentNode.parentNode;
     if(element.id === "modify") {
       this.toggleModification(formWrapper.children);
@@ -38,31 +36,20 @@ class ButtonElement extends React.Component {
     if(element.id === "save") {
       this.saveValues();
     }
-  if(element.id === "download") {
-    this.getValues();
-  }
+    if(element.id === "download") {
+      this.getValues();
+    }
     if(element.id === "display") {
-     let formContainer =  document.getElementById("formWrapper");
-     let displayDataContainer = document.getElementById("displayDataContainer");
-     this.hideElementShowElement(formContainer, displayDataContainer);
+      let formContainer =  document.getElementById("formWrapper");
+      let displayDataContainer = document.getElementById("displayDataContainer");
+      this.hideElementShowElement(formContainer, displayDataContainer);
     }
     if(element.id === "return") {
       let formContainer =  document.getElementById("formWrapper");
       let displayDataContainer = document.getElementById("displayDataContainer");
       this.hideElementShowElement(displayDataContainer,formContainer);
     }
-    }
-
-    saveValues() {
-      formValues = [];
-      let formElements = document.querySelectorAll(".formElement");
-      this.getFormValues(formElements);
-      console.log(formValues);
-      for (let i = 0; i < formValues.length; i++) {
-       console.log(formValues[i].id);
-       localModification.setItem('id', formValues[0].id);
-      }
-    }
+  }
 
     hideElementShowElement(elementToHide, elementToShow) {
       this.hideElement(elementToHide);
@@ -86,17 +73,14 @@ class ButtonElement extends React.Component {
     logOut() {
       let logoutElement = document.getElementById("logoutButtonWrapper");
       let loginElement = document.getElementById("login");
-      let saveButton = document.getElementById('saveButtonContainer');
       logoutElement.classList.add("display-none");
       loginElement.classList.remove("display-none");
-      saveButton.classList.add("display-none");
       this.hideModifyButtons();
     }
 
     hideModifyButtons() {
       let modifyButtons = document.querySelectorAll(".modifyButton");
       let modifyMenus = document.querySelectorAll(".tooltip");
-      console.log(modifyMenus);
       for (let i = 0; i < modifyButtons.length; i++) {
         modifyButtons[i].classList.add("display-none");
       }
@@ -105,8 +89,8 @@ class ButtonElement extends React.Component {
         modifyMenus[i].classList.remove("active");
         modifyMenus[i].classList.add("display-none");
       }
-      }
     }
+   }
 
     emptyfields(field) {
       if(field === "login") {
@@ -130,6 +114,7 @@ class ButtonElement extends React.Component {
       formValues = [];
       let formElements = document.querySelectorAll(".formElement");
       this.getFormValues(formElements);
+      this.getCheckedTypeValues();
       this.saveData(JSON.stringify(formValues, null, "\t"));
     }
 
@@ -162,12 +147,12 @@ class ButtonElement extends React.Component {
     }
 
     checkForActiveMenus(currentMenu) {
-    if(modifyMenus.length < 1) {
-      modifyMenus.push(currentMenu);
-    } else {
-      let previousMenu = modifyMenus[0];
-      this.hideToolTip(previousMenu,currentMenu)
-    }
+      if(modifyMenus.length < 1) {
+        modifyMenus.push(currentMenu);
+      } else {
+        let previousMenu = modifyMenus[0];
+        this.hideToolTip(previousMenu,currentMenu)
+      }
     }
 
     hideToolTip(previousMenu, currentMenu) {
@@ -184,30 +169,41 @@ class ButtonElement extends React.Component {
         tempObject.title = formElements[i].children[1].innerHTML;
         tempObject.text = formElements[i].children[2].value;
         formValues.push(tempObject);
-    }
-    let tempObject = {};
-    const selectedType = this.getTypeSelectionValues();
-    tempObject.title = "Type";
-    tempObject.type = selectedType;
-    formValues.push(tempObject);
+      }
     }
 
-    getTypeSelectionValues() {
+    getCheckedTypeValues() {
+      let tempObject = {};
+      const selectedTypeValue = this.getCheckedTypeSelectionValues();
+      const selectedTypeID = this.getCheckedTypeSelectionID();
+      tempObject.id = selectedTypeID;
+      tempObject.title = "Type";
+      tempObject.text = selectedTypeValue;
+      formValues.push(tempObject);
+    }
+
+    getCheckedTypeSelectionID() {
+      const typeSelections = document.querySelectorAll(".radioType1");
+      for (let i = 0; i < typeSelections.length; i++) {
+        if(typeSelections[i].children[0].checked === true) {
+          return typeSelections[i].children[1].id;
+        }
+      }
+    }
+
+    getCheckedTypeSelectionValues() {
       const typeSelections = document.querySelectorAll(".radioType1");
       for (let i = 0; i < typeSelections.length; i++) {
         if(typeSelections[i].children[0].checked === true) {
           return typeSelections[i].children[1].innerHTML;
         }
-        
       }
-     
     }
+
     capitalize = (string) => {
       if (typeof string !== 'string') return ''
       return string.charAt(0).toUpperCase() + string.slice(1)
     }
-
- 
   }
 
 export default ButtonElement;

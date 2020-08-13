@@ -7,6 +7,13 @@ import FormChoiceElement from './FormChoiceElement.js';
 
 class FormContainer extends React.Component {
 
+  componentDidMount() {
+    if(window.localStorage.length) {
+      this.setLocalStorageValues(window.localStorage);
+    } else {
+      return;
+    }
+  }
 
     render(props) {
     return <div>
@@ -55,10 +62,6 @@ class FormContainer extends React.Component {
           </div>
           </div>
         </div>
-        <div id="saveButtonContainer" className="formBottomRow display-none">
-          <ButtonElement name="save"/>
-        </div>
-        
       </div>
       <div id="displayDataContainer" className="displayDataForm animated display-none opacity-0">
           <ButtonElement name="return"/>
@@ -67,10 +70,42 @@ class FormContainer extends React.Component {
      
       </div> 
     }
-    handleClickEvent() {
-      
+
+    setLocalStorageValues(storage) {
+     this.setFormValues(storage);
+     this.setTypeSelectionValues(storage);
     }
 
+    setFormValues(storage) {
+      for (let i = 0; i < storage.length; i++) {
+        let key = localStorage.key(i);
+        // get storage values
+        let parsedValues = JSON.parse(storage[key]);
+        let identificationString = parsedValues.id;
+        if(!identificationString.includes("choice")) {
+          let element = document.getElementById(parsedValues.id).parentElement;
+          // get title element
+          let title = element.children[1];
+          let textArea = element.children[2];
+          // set title element
+          title.innerHTML = parsedValues.title;
+          textArea.style.backgroundColor = parsedValues.backgroundColor;
+        } 
+      }
+    }
+
+    setTypeSelectionValues(storage) {
+      for (let i = 0; i < storage.length; i++) {
+        let key = localStorage.key(i);
+        if(key.includes("choice")) {
+          let parsedValues = JSON.parse(storage[key]);
+          // get title element
+          let text = document.getElementById(parsedValues.id);
+          // set title element
+          text.innerHTML = parsedValues.text;
+        }
+      }
+    }
   }
 
 export default FormContainer;

@@ -24,7 +24,7 @@ class LoginMenu extends React.Component {
         this.closeLoginMenu();
         this.loggedIn();
       } else {
-        console.log("INVALID CREDENTIALS");
+        alert("INVALID CREDENTIALS");
       }
     }
 
@@ -50,13 +50,10 @@ class LoginMenu extends React.Component {
 
   displayModifyButtons() {
     let modifyButtons = document.querySelectorAll(".modifyButton");
-    let saveButton = document.getElementById('saveButtonContainer');
     for (let i = 0; i < modifyButtons.length; i++) {
       modifyButtons[i].classList.remove("display-none");
     }
-    saveButton.classList.remove('display-none');
   }
-
 }
 
 export default LoginMenu;
