@@ -342,6 +342,20 @@ box-shadow: inset 1px 1px 1px #10181d;
 resize: none;
 }
 
+.resetToDefaultButton {
+  position: relative;
+  top:10vh;
+  left:-25%;
+  border-radius: 5px;
+  font-size: 0.8em;
+  min-width:40%;
+  border:2px groove whitesmoke;
+  outline:none;
+  color: whitesmoke;
+  padding:5px;
+  background-color: rgb(153, 4, 4);
+}
+
 .inputElementSmall {
   width: 15vw;
   border-top-left-radius: 5px;
@@ -484,11 +498,13 @@ resize: none;
   transform: scale(1.1);
 }
 
-#return:active {
+#return:active, #reset:active {
   transform: scale(0.9);
 }
 
-
+.resetToDefaultButton:hover {
+  transform: scale(1.1);
+}
 
 .loginButton:hover {
   transform: scale(1.05);

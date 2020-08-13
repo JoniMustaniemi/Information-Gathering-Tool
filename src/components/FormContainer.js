@@ -3,7 +3,7 @@ import FormElementLarge from './FormElementLarge.js';
 import FormElementSmall from './FormElementSmall.js';
 import ButtonElement from './ButtonElement.js';
 import FormChoiceElement from './FormChoiceElement.js';
-/* import form_background from '../pics/form_background.jpg'; */
+import LoginMenu from './LoginMenu.js';
 
 class FormContainer extends React.Component {
 
@@ -42,6 +42,7 @@ class FormContainer extends React.Component {
           <FormElementLarge identifier="fl3" title="Placeholder title 3"/>
           <div className="divider"></div>
           <FormElementLarge identifier="fl4" title="Placeholder title 4"/>
+          <button className="resetToDefaultButton animated display-none" id="reset" onClick={() => this.resetLocalStorage()}> Reset changes to default</button>
         </div>
         <div className="formRight">
         
@@ -105,6 +106,13 @@ class FormContainer extends React.Component {
           text.innerHTML = parsedValues.text;
         }
       }
+    }
+
+   async resetLocalStorage() {
+    let loginHandler = new LoginMenu();
+      window.localStorage.clear();
+      window.location.reload();
+      loginHandler.adminMode = 1;
     }
   }
 

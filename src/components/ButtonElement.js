@@ -73,8 +73,10 @@ class ButtonElement extends React.Component {
     logOut() {
       let logoutElement = document.getElementById("logoutButtonWrapper");
       let loginElement = document.getElementById("login");
+      let resetButton = document.getElementById("reset");
       logoutElement.classList.add("display-none");
       loginElement.classList.remove("display-none");
+      resetButton.classList.add("display-none");
       this.hideModifyButtons();
     }
 

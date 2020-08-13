@@ -1,6 +1,8 @@
 import React from "react"
 
+
 class LoginMenu extends React.Component {
+
     render(props) {
     return <div id="loginContainer" className="display-none loginWrapper">
         <h4>Username</h4>
@@ -31,8 +33,10 @@ class LoginMenu extends React.Component {
   loggedIn() {
     let logoutElement = document.getElementById("logoutButtonWrapper");
     let loginElement = document.getElementById("login");
+    let resetButton = document.getElementById('reset');
     logoutElement.classList.remove("display-none");
     loginElement.classList.add("display-none");
+    resetButton.classList.remove("display-none");
   }
 
     closeLoginMenu() {
@@ -44,7 +48,7 @@ class LoginMenu extends React.Component {
       if(status === "enabled") {
       this.displayModifyButtons();
     } else {
-      //do something
+      this.adminMode = 0;
     }
   }
 
