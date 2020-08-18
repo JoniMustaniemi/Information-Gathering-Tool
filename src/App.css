@@ -6,7 +6,8 @@ body {
 .sidePanel {
   background-color: #1b262c;
   margin-left: -1px;
-  width: 120px;
+  width: 10vw;
+  max-width: 120px;
   height: 100vh;
   position: absolute;
   border-right: 2px groove slategray;
@@ -75,6 +76,7 @@ body {
 }
 
 
+
 .formCenter {
   margin-left:50px;
   margin-right: 50px;
@@ -129,6 +131,10 @@ body {
    left:110px;
    z-index: 3;
    padding-bottom:10px;
+ }
+
+ .loginWrapper input {
+  margin-bottom: 20px;
  }
 
  .loginWrapper > * {
@@ -277,10 +283,9 @@ h3, label {
   height: 60px;
   position: absolute;
   left: 10vw;
-  top:5vh;
+  top: 5vh;
   display: flex;
-  justify-content:space-evenly;
-
+  justify-content: space-evenly;
 }
 
 
@@ -610,7 +615,6 @@ resize: none;
 
 .download button {
   background-image: url('./pics/download_icon.png');
-  margin-top:-15vh;
 }
 
 #display {
@@ -648,6 +652,200 @@ resize: none;
   display: none;
 }
 
+@media only screen and (max-width: 1110px) { 
+  .loginWrapper {
+    margin-left:-20px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .choiceElement, .formRightPart1, .formRightPart2 {
+    margin-left:0;
+  }
+
+  .loginWrapper {
+    margin-left:-40px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+
+  .formTopRow .tooltipSmall {
+    top:10px;
+    left:-20px;
+  }
+
+  .tooltipLarge {
+    top:-280px;
+    left:0;
+  }
+  
+  /* TODO: fl2 tool tip is out of place. */
+  #fl2Modify {
+   position: relative;
+   top:180px;
+  }
+
+  #fl3Modify {
+    left:-15px;
+  }
+
+  #fl4Modify {
+    top:180px;
+    left: -15px;
+  }
+
+  #fl4Tooltip {
+    left: 15px;
+  }
+
+  #fl3Tooltip {
+    left:15px;
+  }
+
+  body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .formCenter {
+    position: absolute;
+    margin-top: 130vh;
+    min-width: 85vw;
+   /*  background-color: lemonchiffon; */
+  }
+
+  .formCenter .inputElementLarge {
+    margin-left:2vw;
+    min-width:80vw;
+    min-height:30vh;
+  }
+
+ .formLeft {
+   display: flex;
+   position: relative;
+ }
+
+ .formRight .formRightPart1, .formRight .formRightPart2 {
+    display: flex;
+    float: left;
+    margin:0;
+    justify-content: space-evenly;
+    margin-top:230px;
+    min-width: 40vw;
+   /*  background-color: lightblue; */
+ }
+
+ .formRight .choiceElement h3  {
+  justify-self: center;
+}
+
+.formLeft {
+  /* background-color: lightgray; */
+  position: absolute;
+  top:50vh;
+  display: grid;
+  min-width: 85vw;
+  justify-content: center;
+}
+
+.formLeft .inputElementLarge {
+  min-width:80vw;
+  min-height:30vh;
+}
+
+.formElementLarge > h3 {
+  /* background-color: lightblue; */
+  min-width: 60vw;
+  padding-left:30%;
+}
+
+#fl2, #fl2 .inputElementLarge, #fl4, #fl4 .inputElementLarge {
+  margin-top:10vh;
+}
+
+  .choiceElement {
+    display: grid;
+    justify-content: center;
+    margin-left: -3vw;
+    margin-top:44vh;
+}
+
+ .formRightPart1 {
+  left:30vw;
+ }
+
+ .formRightPart2 {
+   right: 30vw;
+ }
+
+ .formRightPart1 .tooltipSmall, .formRightPart2 .tooltipSmall {
+    top:10px;
+    left: -30px;
+ }
+
+ .formTopRow {
+   margin:0;
+   margin-top:80px;
+   margin-left:-10vw;
+   width: 100vw;
+   display: flex;
+   justify-content: space-evenly;
+ }
+
+ .inputElementSmall {
+   min-width: 25vw;
+ }
 
 
+ .sidePanel {
+  max-width: none;
+  border:0;
+  border-bottom:  2px groove slategray;
+  width: 110vw;
+  height:11vh;
+}
 
+.sidePanel .iconContainer {
+  position: absolute;
+ }
+
+ .login, .logout {
+  top:-30px;
+   left:5vw;
+ }
+
+ .download {
+   top:20px;
+   left: 85vw;
+ }
+
+ .display {
+   top:20px;
+   left: 45vw;
+ }
+
+ .display h4 {
+   margin-left:-25px;
+   width:100px;
+ }
+
+
+ .loginWrapper {
+   margin:0;
+   left:0;
+   top:10vh;
+ }
+
+ .displayDataForm #return{
+  margin-top:160px;
+  margin-left:20px;
+ }
+
+ #reset {
+   top:35vh;
+   left:24vw;
+ }
+
+ 
+}

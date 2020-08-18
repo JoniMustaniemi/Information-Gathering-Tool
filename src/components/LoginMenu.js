@@ -48,7 +48,7 @@ class LoginMenu extends React.Component {
       if(status === "enabled") {
       this.displayModifyButtons();
     } else {
-      this.adminMode = 0;
+      return;
     }
   }
 
