@@ -117,12 +117,22 @@ class ButtonElement extends React.Component {
       let formElements = document.querySelectorAll(".formElement");
       this.getFormValues(formElements);
       this.getCheckedTypeValues();
-      this.saveData(JSON.stringify(formValues, null, "\t"));
+      this.saveDataJSON(formValues);
     }
 
-    saveData(data) {
-      var blob = new Blob([data], {type: "text/plain;charset=utf-8"});
+    saveData() {
+      // TODO: get switcher value and get file in correct format
+    }
+
+    saveDataJSON(data) {
+      var blob = new Blob([JSON.stringify(data, null, "\t")], {type: "text/plain;charset=utf-8"});
       saveAs(blob, "form_data.txt");
+    }
+
+    saveDataXML(data) {
+      const XMLData = this.json2xml(JSON.stringify(data));
+      var blob = new Blob([XMLData], {type: "text/plain;charset=utf-8"});
+      saveAs(blob, "form_data.xml");
     }
 
     toggleModification(children) {
@@ -206,6 +216,47 @@ class ButtonElement extends React.Component {
       if (typeof string !== 'string') return ''
       return string.charAt(0).toUpperCase() + string.slice(1)
     }
+
+    json2xml(data) {
+      var a = JSON.parse(data)
+      var c = document.createElement("root");
+      var t = function (v) {
+          return {}.toString.call(v).split(' ')[1].slice(0, -1).toLowerCase();
+      };
+      var f = function (f, c, a, s) {
+          c.setAttribute("type", t(a));
+          if (t(a) != "array" && t(a) != "object") {
+              if (t(a) != "null") {
+                  c.appendChild(document.createTextNode(a));
+              }
+          } else {
+              for (var k in a) {
+                  var v = a[k];
+                  if (k == "__type" && t(a) == "object") {
+                      c.setAttribute("__type", v);
+                  } else {
+                      if (t(v) == "object") {
+                          var ch = c.appendChild(document.createElementNS(null, s ? "item" : k));
+                          f(f, ch, v);
+                      } else if (t(v) == "array") {
+                          var ch = c.appendChild(document.createElementNS(null, s ? "item" : k));
+                          f(f, ch, v, true);
+                      } else {
+                          var va = document.createElementNS(null, s ? "item" : k);
+                          if (t(v) != "null") {
+                              va.appendChild(document.createTextNode(v));
+                          }
+                          var ch = c.appendChild(va);
+                          ch.setAttribute("type", t(v));
+                      }
+                  }
+              }
+          }
+      };
+      f(f, c, a, t(a) == "array");
+      return c.outerHTML;
+  }
+
   }
 
 export default ButtonElement;
