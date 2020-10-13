@@ -1,6 +1,7 @@
 import React from "react";
 import ButtonElement from './ButtonElement.js';
 import LoginMenu from './LoginMenu.js';
+import FormatChanger from './FormatChanger.js';
 
 class SidePanel extends React.Component {
     render(props) {
@@ -12,8 +13,8 @@ class SidePanel extends React.Component {
          <ButtonElement name="login"/>
          <ButtonElement name="display"/>
          <ButtonElement name="download"/>
+         <FormatChanger/>
          <LoginMenu/>
-         
      </div>
   
     }

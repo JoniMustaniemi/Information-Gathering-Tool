@@ -117,11 +117,17 @@ class ButtonElement extends React.Component {
       let formElements = document.querySelectorAll(".formElement");
       this.getFormValues(formElements);
       this.getCheckedTypeValues();
-      this.saveDataJSON(formValues);
+      this.saveData();
     }
 
     saveData() {
-      // TODO: get switcher value and get file in correct format
+      let currentFormat = document.getElementById('formatSwitcher').children[0].innerHTML;
+     if(currentFormat === 'JSON') {
+      this.saveDataJSON(formValues);
+     } else if (currentFormat === 'XML') {
+       this.saveDataXML(formValues);
+     }
+      
     }
 
     saveDataJSON(data) {

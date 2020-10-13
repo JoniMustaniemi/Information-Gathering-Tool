@@ -141,6 +141,49 @@ body {
    margin-top:0;
  }
 
+ .switch {
+   background-color: slategrey;
+   border-radius: 50px;
+   transition: all 0.2s ease-in-out;
+   margin-top:1px;
+   margin-left:1px;
+   width:23px;
+   height: 23px;
+   display: flex;
+   justify-content: center;
+ }
+
+ .switch:hover {
+  background-color: teal;
+  cursor: pointer;
+ }
+
+ .switch p {
+   font-size: 7px;
+   font-weight: bold;
+   color:rgb(255, 255, 255);
+   text-shadow: -0.8px 0 black, 0 0.8px black, 0.8px 0 black, 0 -0.8px black;
+ }
+
+ .moveSwitchRight {
+   transform: translateX(25px);
+ }
+
+ .moveSwitchLeft {
+  transform: translateX(0px);
+}
+
+ .formatChanger {
+   position: relative;
+   bottom:-40px;
+   background-color: whitesmoke;
+   border-radius: 50px;
+   border: 1px solid slategray;
+   width: 50px;
+   height: 25px;
+   margin-left:30%;
+ }
+
  .loginWrapper input {
    outline: none;
    border-radius: 5px;
@@ -229,7 +272,7 @@ body {
 }
 
 .animated {
- transition: all 1s ease-in-out;
+ transition: all 0.5  s ease-in-out;
 }
 
 .transparent-background {
@@ -349,8 +392,8 @@ resize: none;
 
 .resetToDefaultButton {
   position: relative;
-  top:10vh;
-  left:-25%;
+  top:6vh;
+  left:150%;
   border-radius: 5px;
   font-size: 0.8em;
   min-width:40%;
@@ -536,7 +579,7 @@ resize: none;
 }
 
 .sidePanel #display {
-  margin-bottom:40vh;
+  margin-bottom:28vh;
   background-size: contain;
 }
 
@@ -666,186 +709,5 @@ resize: none;
   .loginWrapper {
     margin-left:-40px;
   }
-}
 
-@media only screen and (max-width: 800px) {
-
-  .formTopRow .tooltipSmall {
-    top:10px;
-    left:-20px;
-  }
-
-  .tooltipLarge {
-    top:-280px;
-    left:0;
-  }
-  
-  /* TODO: fl2 tool tip is out of place. */
-  #fl2Modify {
-   position: relative;
-   top:180px;
-  }
-
-  #fl3Modify {
-    left:-15px;
-  }
-
-  #fl4Modify {
-    top:180px;
-    left: -15px;
-  }
-
-  #fl4Tooltip {
-    left: 15px;
-  }
-
-  #fl3Tooltip {
-    left:15px;
-  }
-
-  body {
-    overflow-y: scroll;
-    overflow-x: hidden;
-  }
-
-  .formCenter {
-    position: absolute;
-    margin-top: 130vh;
-    min-width: 85vw;
-   /*  background-color: lemonchiffon; */
-  }
-
-  .formCenter .inputElementLarge {
-    margin-left:2vw;
-    min-width:80vw;
-    min-height:30vh;
-  }
-
- .formLeft {
-   display: flex;
-   position: relative;
- }
-
- .formRight .formRightPart1, .formRight .formRightPart2 {
-    display: flex;
-    float: left;
-    margin:0;
-    justify-content: space-evenly;
-    margin-top:230px;
-    min-width: 40vw;
-   /*  background-color: lightblue; */
- }
-
- .formRight .choiceElement h3  {
-  justify-self: center;
-}
-
-.formLeft {
-  /* background-color: lightgray; */
-  position: absolute;
-  top:50vh;
-  display: grid;
-  min-width: 85vw;
-  justify-content: center;
-}
-
-.formLeft .inputElementLarge {
-  min-width:80vw;
-  min-height:30vh;
-}
-
-.formElementLarge > h3 {
-  /* background-color: lightblue; */
-  min-width: 60vw;
-  padding-left:30%;
-}
-
-#fl2, #fl2 .inputElementLarge, #fl4, #fl4 .inputElementLarge {
-  margin-top:10vh;
-}
-
-  .choiceElement {
-    display: grid;
-    justify-content: center;
-    margin-left: -3vw;
-    margin-top:44vh;
-}
-
- .formRightPart1 {
-  left:30vw;
- }
-
- .formRightPart2 {
-   right: 30vw;
- }
-
- .formRightPart1 .tooltipSmall, .formRightPart2 .tooltipSmall {
-    top:10px;
-    left: -30px;
- }
-
- .formTopRow {
-   margin:0;
-   margin-top:80px;
-   margin-left:-10vw;
-   width: 100vw;
-   display: flex;
-   justify-content: space-evenly;
- }
-
- .inputElementSmall {
-   min-width: 25vw;
- }
-
-
- .sidePanel {
-  max-width: none;
-  border:0;
-  border-bottom:  2px groove slategray;
-  width: 110vw;
-  height:11vh;
-}
-
-.sidePanel .iconContainer {
-  position: absolute;
- }
-
- .login, .logout {
-  top:-30px;
-   left:5vw;
- }
-
- .download {
-   top:20px;
-   left: 85vw;
- }
-
- .display {
-   top:20px;
-   left: 45vw;
- }
-
- .display h4 {
-   margin-left:-25px;
-   width:100px;
- }
-
-
- .loginWrapper {
-   margin:0;
-   left:0;
-   top:10vh;
- }
-
- .displayDataForm #return{
-  margin-top:160px;
-  margin-left:20px;
- }
-
- #reset {
-   top:35vh;
-   left:24vw;
- }
-
- 
 }
