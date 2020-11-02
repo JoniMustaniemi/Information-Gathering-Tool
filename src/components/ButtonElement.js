@@ -76,6 +76,9 @@ class ButtonElement extends React.Component {
       let resetButton = document.getElementById("reset");
       let sidebarIcons = document.querySelectorAll(".iconContainer");
       let switcher = document.querySelectorAll(".formatChanger");
+      let displayDataContainer = document.getElementById("displayDataContainer");
+      let formContainer =  document.getElementById("formWrapper");
+      this.hideElementShowElement(displayDataContainer, formContainer);
       logoutElement.classList.add("display-none");
       loginElement.classList.remove("display-none");
       resetButton.classList.add("display-none");
