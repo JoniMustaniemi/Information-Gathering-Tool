@@ -11,9 +11,9 @@ class SidePanel extends React.Component {
         <ButtonElement name="logout"/>
        </div>
          <ButtonElement name="login"/>
-         <ButtonElement name="display"/>
-         <ButtonElement name="download"/>
-         <FormatChanger/>
+         <ButtonElement name="display" defaultClass="display-none"/>
+         <ButtonElement name="download" defaultClass="display-none"/>
+         <FormatChanger defaultClass="display-none"/>
          <LoginMenu/>
      </div>
   

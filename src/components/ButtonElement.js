@@ -17,7 +17,7 @@ class ButtonElement extends React.Component {
        }
       }
      
-     return  <div className={this.props.name + " iconContainer"}>
+     return  <div className={this.props.name + " iconContainer " + this.props.defaultClass}>
      <button id={this.props.name} onClick={(e) => this.handleClickEvent(e.target)}><h4>{name}</h4></button>
      </div>
     }
@@ -67,17 +67,26 @@ class ButtonElement extends React.Component {
       elementToShow.classList.remove("display-none");
       setTimeout(function () {
            elementToShow.classList.remove("opacity-0");
-    }, 500);
+    }, 100);
     }
 
     logOut() {
       let logoutElement = document.getElementById("logoutButtonWrapper");
       let loginElement = document.getElementById("login");
       let resetButton = document.getElementById("reset");
+      let sidebarIcons = document.querySelectorAll(".iconContainer");
+      let switcher = document.querySelectorAll(".formatChanger");
       logoutElement.classList.add("display-none");
       loginElement.classList.remove("display-none");
       resetButton.classList.add("display-none");
+      switcher[0].classList.add("display-none");
       this.hideModifyButtons();
+
+      for (let i = 0; i < sidebarIcons.length; i++) {
+        if(!sidebarIcons[i].classList.contains("login")) {
+          sidebarIcons[i].classList.add("display-none");
+        }
+      }
     }
 
     hideModifyButtons() {
@@ -104,11 +113,11 @@ class ButtonElement extends React.Component {
     }
 
     toggleLoginMenu() {
-      let element = document.getElementById("loginContainer");
-      if(element.classList.contains("display-none")) {
-        element.classList.remove("display-none");
+      let loginElement = document.getElementById("loginContainer");
+      if(loginElement.classList.contains("display-none")) {
+        loginElement.classList.remove("display-none");
       } else {
-        element.classList.add("display-none");
+        loginElement.classList.add("display-none");
       }
     }
 

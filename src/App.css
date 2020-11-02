@@ -272,7 +272,7 @@ body {
 }
 
 .animated {
- transition: all 0.5  s ease-in-out;
+ transition: all 2s  s ease-in-out;
 }
 
 .transparent-background {
@@ -466,7 +466,7 @@ resize: none;
 }
 
 .tooltipChoice {
-  top:-3.6vh;
+  top:-10vh;
   left:-130px;
 }
 
@@ -692,7 +692,7 @@ resize: none;
 }
 
 .display-none {
-  display: none;
+  display: none !important;
 }
 
 @media only screen and (max-width: 1110px) { 

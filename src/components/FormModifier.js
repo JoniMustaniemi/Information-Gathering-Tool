@@ -9,7 +9,7 @@ class FormModifier extends React.Component {
     let inputID = this.props.type+"Input"+ this.props.formReference;
     let buttonID = this.props.type+"Button"+ this.props.formReference;
     return <div className={this.props.type +" modifyChangerWrapper"}>
-      <input maxLength='32' id={inputID} type={this.props.type} className={this.props.type+"type animated "}></input>
+      <input maxLength='32' id={inputID} type={this.props.type} className={this.props.type+"type animated"}></input>
       <button id={buttonID} onClick={() => this.handleClickEvent(inputID, buttonID)}>set {this.props.type}</button>
       </div>
     }

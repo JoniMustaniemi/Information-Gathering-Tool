@@ -3,7 +3,7 @@ import React from "react";
 class FormatChanger extends React.Component {
   
   render(props) {
-   return <div className="formatChanger">
+   return <div className={this.props.defaultClass + " formatChanger"}>
      <div className="switch" id="formatSwitcher" onClick={(e) => this.changeFormat()}><p>JSON</p></div>
    </div>
   }
