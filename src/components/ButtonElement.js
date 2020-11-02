@@ -57,17 +57,11 @@ class ButtonElement extends React.Component {
     }
 
     hideElement(elementToHide) {
-      elementToHide.classList.add("opacity-0");
-      setTimeout(function () {
            elementToHide.classList.add("display-none");
-    }, 1200);
     }
 
     showElement(elementToShow) {
       elementToShow.classList.remove("display-none");
-      setTimeout(function () {
-           elementToShow.classList.remove("opacity-0");
-    }, 100);
     }
 
     logOut() {

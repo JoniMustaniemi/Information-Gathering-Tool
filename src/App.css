@@ -107,10 +107,6 @@ body {
   width:100%;
 }
 
-.opacity-0 { 
-  opacity: 0 !important; 
- }
-
  .scale-0 {
    transform: scale(0);
  }
