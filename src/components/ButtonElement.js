@@ -72,11 +72,13 @@ class ButtonElement extends React.Component {
       let switcher = document.querySelectorAll(".formatChanger");
       let displayDataContainer = document.getElementById("displayDataContainer");
       let formContainer =  document.getElementById("formWrapper");
+      let linkElement = document.getElementById("linkElement");
       this.hideElementShowElement(displayDataContainer, formContainer);
       logoutElement.classList.add("display-none");
       loginElement.classList.remove("display-none");
       resetButton.classList.add("display-none");
       switcher[0].classList.add("display-none");
+      linkElement.classList.add("display-none");
       this.hideModifyButtons();
 
       for (let i = 0; i < sidebarIcons.length; i++) {
@@ -122,7 +124,7 @@ class ButtonElement extends React.Component {
       formValues = [];
       let formElements = document.querySelectorAll(".formElement");
       this.getFormValues(formElements);
-      this.getCheckedTypeValues();
+      this.getRadioTypeValues();
       this.saveData();
     }
 
@@ -195,32 +197,29 @@ class ButtonElement extends React.Component {
         formValues.push(tempObject);
       }
     }
-
-    getCheckedTypeValues() {
-      let tempObject = {};
-      const selectedTypeValue = this.getCheckedTypeSelectionValues();
-      const selectedTypeID = this.getCheckedTypeSelectionID();
-      tempObject.id = selectedTypeID;
+    // TODO: fix
+    getRadioTypeValues() {
+      /* let tempObject = {};
+      const radioTypeValue = this.getRadioTypeSelectionValues();
+      const radioTypeID = this.getRadioTypeSelectionID();
+      tempObject.id = radioTypeID;
       tempObject.title = "Type";
-      tempObject.text = selectedTypeValue;
+      tempObject.text = radioTypeValue;
       formValues.push(tempObject);
+      alert(formValues); */
     }
 
-    getCheckedTypeSelectionID() {
+    getRadioTypeSelectionID() {
       const typeSelections = document.querySelectorAll(".radioType1");
       for (let i = 0; i < typeSelections.length; i++) {
-        if(typeSelections[i].children[0].checked === true) {
           return typeSelections[i].children[1].id;
-        }
       }
     }
 
-    getCheckedTypeSelectionValues() {
+    getRadioTypeSelectionValues() {
       const typeSelections = document.querySelectorAll(".radioType1");
       for (let i = 0; i < typeSelections.length; i++) {
-        if(typeSelections[i].children[0].checked === true) {
           return typeSelections[i].children[1].innerHTML;
-        }
       }
     }
 

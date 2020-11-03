@@ -1,4 +1,5 @@
 import React from "react";
+import LinkShareElement from './LinkShareElement.js';
 import FormElementLarge from './FormElementLarge.js';
 import FormElementSmall from './FormElementSmall.js';
 import ButtonElement from './ButtonElement.js';
@@ -18,6 +19,7 @@ class FormContainer extends React.Component {
     render(props) {
     return <div>
       <div id="formWrapper" className="formContainer animated">
+        <LinkShareElement identifier="linkElement"/>
       <div className="formTopRow animated">
             <div className="topFs1">
             <FormElementSmall identifier="fs1" title="[Title]"/>
@@ -64,7 +66,7 @@ class FormContainer extends React.Component {
           </div>
         </div>
       </div>
-      <div id="displayDataContainer" className="displayDataForm animated display-none opacity-0">
+      <div id="displayDataContainer" className="displayDataForm animated display-none">
           <ButtonElement name="return"/>
           <h1>Nothing here yet</h1>
       </div>
