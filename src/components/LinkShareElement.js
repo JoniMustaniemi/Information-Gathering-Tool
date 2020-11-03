@@ -47,14 +47,14 @@ class LinkShareElement extends React.Component {
          if(params) {
           el.value = window.location.href +
           "?fs1title=" + params.fs1.title + 
-          "?"+ "fs2title=" + params.fs2.title + 
-          "?" + "fs3title=" + params.fs3.title + 
-          "?" + "fs4title=" + params.fs4.title + 
-          "?" + "fs5title=" + params.fs5.title + 
-          "?" + "fl1title=" + params.fl1.title + 
-          "?" + "fl2title=" + params.fl2.title + 
-          "?" + "fl3title=" + params.fl3.title + 
-          "?" + "fl4title=" + params.fl4.title;
+          "?fs2title=" + params.fs2.title + 
+          "?fs3title=" + params.fs3.title + 
+          "?fs4title=" + params.fs4.title + 
+          "?fs5title=" + params.fs5.title + 
+          "?fl1title=" + params.fl1.title + 
+          "?fl2title=" + params.fl2.title + 
+          "?fl3title=" + params.fl3.title + 
+          "fl4title=" + params.fl4.title;
          } else {
            this.noCopy();
          }
