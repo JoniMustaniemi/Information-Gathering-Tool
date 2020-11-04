@@ -37,6 +37,9 @@ class LoginMenu extends React.Component {
     let sidebarIcons = document.querySelectorAll(".iconContainer");
     let switcher = document.querySelectorAll(".formatChanger");
     let linkElement = document.getElementById("linkElement");
+    let styleChanger = document.getElementById("styleChanger");
+
+    styleChanger.classList.remove("display-none");
     linkElement.classList.remove("display-none");
     logoutElement.classList.remove("display-none");
     resetButton.classList.remove("display-none");

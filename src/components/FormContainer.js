@@ -5,6 +5,7 @@ import FormElementSmall from './FormElementSmall.js';
 import ButtonElement from './ButtonElement.js';
 import FormChoiceElement from './FormChoiceElement.js';
 import LoginMenu from './LoginMenu.js';
+import StyleChanger from './StyleChanger.js';
 
 class FormContainer extends React.Component {
 
@@ -20,6 +21,7 @@ class FormContainer extends React.Component {
     return <div>
       <div id="formWrapper" className="formContainer animated">
         <LinkShareElement identifier="linkElement"/>
+        <StyleChanger identifier="styleElement"/>
       <div className="formTopRow animated">
             <div className="topFs1">
             <FormElementSmall identifier="fs1" title="[Title]"/>

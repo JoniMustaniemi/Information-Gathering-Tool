@@ -107,6 +107,28 @@ body {
   width:100%;
 }
 
+.styleChanger {
+  border: 1px double slategrey;
+  position: absolute;
+  border-radius: 10px;
+  top:30vh;
+  right:-10px;
+  padding: 5px;
+  width:50px;
+  max-height: 40px;
+  background-color: #1b262c;
+  transition: all 0.5s ease-in-out;
+}
+
+.styleChangerIcon {
+  width:40px;
+  height:40px;
+  border-radius: 5px;
+  filter: contrast(0.2);
+  background-image: url('./pics/color_change.png');
+  background-size: cover;
+}
+
 .linkShareElementIcon {
   width:40px;
   height:40px;
@@ -116,7 +138,6 @@ body {
 }
 
 .linkButtonActive {
-
  transform: scale(1.2);
 }
 
@@ -133,7 +154,7 @@ body {
   transition: all 0.5s ease-in-out;
 }
 
-.linkElementContainer:hover {
+.linkElementContainer:hover, .styleChanger:hover {
   filter: brightness(1.8);
 }
 

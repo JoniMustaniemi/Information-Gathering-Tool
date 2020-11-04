@@ -73,7 +73,10 @@ class ButtonElement extends React.Component {
       let displayDataContainer = document.getElementById("displayDataContainer");
       let formContainer =  document.getElementById("formWrapper");
       let linkElement = document.getElementById("linkElement");
+      let styleChanger = document.getElementById("styleChanger");
+
       this.hideElementShowElement(displayDataContainer, formContainer);
+      styleChanger.classList.add("display-none");
       logoutElement.classList.add("display-none");
       loginElement.classList.remove("display-none");
       resetButton.classList.add("display-none");
