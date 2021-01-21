@@ -81,6 +81,7 @@ class FormContainer extends React.Component {
      this.setTypeSelectionValues(storage);
     }
 
+    //set form values from storage
     setFormValues(storage) {
       for (let i = 0; i < storage.length; i++) {
         let key = localStorage.key(i);
@@ -94,6 +95,7 @@ class FormContainer extends React.Component {
           let textArea = element.children[2];
           // set title element
           title.innerHTML = parsedValues.title;
+          // set background color for form elements
           textArea.style.backgroundColor = parsedValues.backgroundColor;
         } 
       }

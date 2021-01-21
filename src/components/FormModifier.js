@@ -21,9 +21,21 @@ class FormModifier extends React.Component {
         let inputField = document.getElementById(inputID);
         this.changeFormTitle(this.props.formReference, inputField.value, inputField)
       } else if (buttonID.includes(color)) {
+      
         let inputField = document.getElementById(this.props.formReference+"TextArea");
         let colorElement = document.getElementById(inputID);
-        this.setBackgroundColor(inputField,colorElement.value);
+        //check if this is for changing body color or form color
+        this.checkBodyOrForm(buttonID, inputField, colorElement.value);
+      }
+    }
+
+    checkBodyOrForm(buttonID, inputFieldID, color) {
+      //for body
+      if (buttonID === 'colorButtonformWrapper') {
+        let element = document.getElementById('formWrapper');
+        this.setBackgroundColorBody(element,color);
+      } else {
+        this.setBackgroundColor(inputFieldID,color);
       }
     }
 
@@ -39,6 +51,12 @@ class FormModifier extends React.Component {
 
     setBackgroundColor(inputArea, color) {
       inputArea.style.backgroundColor = color;
+      this.saveValues();
+    }
+
+    setBackgroundColorBody(element, color) {
+      element.style.backgroundColor = color;
+      //TODO: save body background
       this.saveValues();
     }
 

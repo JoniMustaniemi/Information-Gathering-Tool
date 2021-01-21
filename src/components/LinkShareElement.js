@@ -72,20 +72,20 @@ class LinkShareElement extends React.Component {
 
          getformValues(storage) {
            let values = {
-             fs1: null,
-             fs2: null,
-             fs3: null,
-             fs4: null,
-             fs5: null,
-             fl1: null,
-             fl2: null,
-             fl3: null,
-             fl4: null,
-             choice1: null,
-             choice2: null,
-             choice3: null,
-             choice4: null,
-             choice5: null,
+             fs1: '',
+             fs2: '',
+             fs3: '',
+             fs4: '',
+             fs5: '',
+             fl1: '',
+             fl2: '',
+             fl3: '',
+             fl4: '',
+             choice1: '',
+             choice2: '',
+             choice3: '',
+             choice4: '',
+             choice5: '',
            };
            if(!storage.length) {
             return;
